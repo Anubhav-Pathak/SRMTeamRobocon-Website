@@ -1,0 +1,16 @@
+{
+  "name": "srmteamrobocon",
+  "version": "1.0.0",
+  "description": "This is the official website for SRMTeamRobocon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/Anubhav-Pathak/SRMTeamRobocon-Website.git",
+  "author": "Anubhav Pathak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anubhav-Pathak/SRMTeamRobocon-Website/issues"
+  },
+  "homepage": "https://github.com/Anubhav-Pathak/SRMTeamRobocon-Website#readme"
+}
