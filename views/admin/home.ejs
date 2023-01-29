@@ -1,0 +1,17 @@
+<%- include("../includes/header.ejs") %>
+
+<main class="">
+    <section class="min-h-[85vh] flex flex-col justify-center text-center p-2">
+        <h3 class="text-2xl">Welcome</h3>
+        <h1 class="text-4xl mb-4"><%= admin.name %></h1>
+        <p><%= admin.position %></p>
+        <% if(admin.position !== "Team lead") { %>
+            <p><%= admin.domain.toUpperCase() %></p>
+        <% } %>
+    </section>
+    <section class="p-2">
+        <h1 class="text-2xl">Tasks Due</h1>
+    </section>
+</main>
+
+<%- include("../includes/footer.ejs") %>

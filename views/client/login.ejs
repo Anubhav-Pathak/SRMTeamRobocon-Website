@@ -1,0 +1,17 @@
+<%- include("../includes/header.ejs") %>
+
+<main class="min-h-[85vh] flex flex-col justify-center items-center px-2 py-12">
+    <form action="/login" method="POST" class="p-4 flex flex-col gap-2 border-2 rounded-lg shadow-md">
+        <div class="form-control border-b-2">
+            <label for="register-number" class="block mb-2"> Register no: </label>
+            <input type="text" id="register-number" name="registerNo" required class="outline-none w-full">
+        </div>
+        <div class="border-b-2 mb-4">
+            <label for="password" class="block mb-2"> Password: </label>
+            <input type="password" id="password" name="password" required class="outline-none w-full">
+        </div>
+        <input type="submit" value="Sign in" class="bg-black text-white rounded-sm p-2 cursor-pointer">
+    </form>
+</main>
+
+<%- include("../includes/footer.ejs") %>

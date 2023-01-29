@@ -1,0 +1,100 @@
+<%- include("../includes/header.ejs") %>
+
+<main class="flex flex-col text-center px-2 py-12">
+    
+    <h1 class="text-4xl mb-4">Meet the Team</h1>
+    <p class="mb-12">Through their unwavering commitment to the team and their relentless pursuit of excellence, these are the bunch of people who make it happen.</p>
+    
+    <section class="mb-12">
+        <h1 class="text-left text-xl mb-4">OUR BOARD</h1>
+        <section class="flex flex-wrap gap-8 items-center justify-evenly">
+            <% for(member of board) { %>
+                <article class="h-[350px] flex flex-col max-w-xs items-center border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 hover:bg-black hover:text-white">
+                    <img src="/images/people/<%= member.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
+                    <h3 class="text-lg font-bold"><%= member.name %></h3>
+                    <p><%= member.position %></p>
+                    <% if(member.position !== "Team lead") { %>
+                        <p><%= member.domain.toUpperCase() %></p>
+                    <% } %>
+                    <ul class="flex gap-4 mt-4">
+                        <li><a href="<%= member.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
+                        <li><a href="<%= member.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </article>
+            <% } %>
+        </section>
+    </section>
+
+    <section>
+        <h1 class="text-left text-xl mb-4">SAMBED</h1>
+        <section class="flex flex-wrap gap-8 items-center justify-evenly">
+            <% for(member of sambed) { %>
+                <article class="h-[350px] flex flex-col max-w-xs items-center border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 hover:bg-black hover:text-white">
+                    <img src="/images/people/<%= member.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
+                    <h3 class="text-lg font-bold"><%= member.name %></h3>
+                    <p><%= member.position %></p>
+                    <ul class="flex gap-4 mt-4">
+                        <li><a href="<%= member.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
+                        <li><a href="<%= member.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </article>
+            <% } %>
+        </section>
+    </section>
+
+    <section>
+        <h1 class="text-left text-xl mb-4">SIASED</h1>
+        <section class="flex flex-wrap gap-8 items-center justify-evenly">
+            <% for(member of siased) { %>
+                <article class="h-[350px] flex flex-col max-w-xs items-center border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 hover:bg-black hover:text-white">
+                    <img src="/images/people/<%= member.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
+                    <h3 class="text-lg font-bold"><%= member.name %></h3>
+                    <p><%= member.position %></p>
+                    <ul class="flex gap-4 mt-4">
+                        <li><a href="<%= member.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
+                        <li><a href="<%= member.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </article>
+            <% } %>
+        </section>
+    </section>
+
+    <section>
+        <h1 class="text-left text-xl mb-4">SPACED</h1>
+        <section class="flex flex-wrap gap-8 items-center justify-evenly">
+            <% for(member of spaced) { %>
+                <article class="h-[350px] flex flex-col max-w-xs items-center border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 hover:bg-black hover:text-white">
+                    <img src="/images/people/<%= member.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
+                    <h3 class="text-lg font-bold"><%= member.name %></h3>
+                    <p><%= member.position %></p>
+                    <ul class="flex gap-4 mt-4">
+                        <li><a href="<%= member.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
+                        <li><a href="<%= member.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </article>
+            <% } %>
+        </section>
+    </section>
+
+    <section>
+        <h1 class="text-left text-xl mb-4">MCSOCD</h1>
+        <section class="flex flex-wrap gap-8 items-center justify-evenly">
+            <% for(member of mcsocd) { %>
+                <article class="h-[350px] flex flex-col max-w-xs items-center border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 hover:bg-black hover:text-white">
+                    <img src="/images/people/<%= member.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
+                    <h3 class="text-lg font-bold"><%= member.name %></h3>
+                    <p><%= member.position %></p>
+                    <ul class="flex gap-4 mt-4">
+                        <li><a href="<%= member.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
+                        <li><a href="<%= member.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </article>
+            <% } %>
+        </section>
+    </section>
+
+    
+
+</main>
+
+<%- include("../includes/footer.ejs") %>

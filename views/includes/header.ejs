@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/acbdca7f8c.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="/css/output.css">
+    
+    <title> <%= docTitle %> </title>
+</head>
+<body>
+    <nav class="flex items-center justify-between p-2 bg-black text-white">
+        <% if(!isAuthenticated) { %>
+            <img src="#" alt="Logo">
+            <ul class="flex gap-x-4">
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Our Team</a></li>
+            </ul>
+            <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/login">Login</a></button>
+        <% } else { %>
+            <p><%= admin.name %></p>
+            <ul class="flex gap-x-4">
+                <li><a href="/admin/">Panel</a></li>
+                <li><a href="/admin/task">Tasks</a></li>
+                <% if(admin.position == "Team lead" || admin.position == "Lead") { %>
+                    <li><a href="/admin/team">Members</a></li>
+                <% } %>
+            </ul>
+            <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/logout">Logout</a></button>
+        <% } %>
+    </nav>
