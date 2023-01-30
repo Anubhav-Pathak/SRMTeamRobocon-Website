@@ -12,7 +12,7 @@ import errorRoute from "./routes/error.mjs";
 
 import Member from "./models/member.mjs";
 
-const MONGODB_URI = "";
+const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = null;
 
 const app = express();
