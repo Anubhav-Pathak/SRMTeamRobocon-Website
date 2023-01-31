@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ul.active{
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+}
