@@ -12,4 +12,4 @@ const alumniSchema = mongoose.Schema({
 
 const Alumni = mongoose.model("alumni", alumniSchema)
 
-export default alumniSchema;
+export default Alumni;
