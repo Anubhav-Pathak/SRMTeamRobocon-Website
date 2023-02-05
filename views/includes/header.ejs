@@ -18,7 +18,7 @@
 </head>
 <body>
     
-    <nav class="flex items-center justify-between p-2 bg-black text-white">
+    <nav class="fixed w-full flex items-center justify-between px-2 h-[100px] bg-black text-white">
         
         <% if(isAuthenticated) { %> 
             <p><%= admin.name %></p>
@@ -26,31 +26,33 @@
             <img src="#" alt="Logo">
         <% } %>
 
-        <ul id="menu" class="hidden md:flex gap-x-4">
-        <% if(!isAuthenticated) { %>
-            <li><a href="/">Home</a></li>
-            <li><a href="/team">Our Team</a></li>
-            <li><a href="/achievements">Achievements</a></li>
-        <% } else { %>
-            <li><a href="/admin/">Panel</a></li>
-            <li><a href="/admin/task">Tasks</a></li>
-            <% switch (admin.position) {
-                case 'Team lead' : %>
-                    <li><a href="/admin/achievements">Achievements</a></li>
-                    <li><a href="/admin/team">Members</a></li>
-                    <% break;               
-                case 'Lead' : %>
-                    <li><a href="/admin/team">Members</a></li>
-                    <% break;              
-            } %>
-        <% } %>
+        <ul id="menu" class="md:flex md:gap-x-4 -translate-y-[100vh] md:-translate-y-0">
+            <% if(!isAuthenticated) { %>
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="/achievements">Achievements</a></li>
+                <li><a href="/alumni">Alumni</a></li>
+            <% } else { %>
+                <li><a href="/admin/">Panel</a></li>
+                <li><a href="/admin/task">Tasks</a></li>
+                <% switch (admin.position) {
+                    case 'Team lead' : %>
+                        <li><a href="/admin/achievements">Achievements</a></li>
+                        <li><a href="/admin/team">Members</a></li>
+                        <li><a href="/alumni">Alumni</a></li>
+                        <% break;               
+                    case 'Lead' : %>
+                        <li><a href="/admin/team">Members</a></li>
+                        <% break;              
+                } %>
+            <% } %>
         </ul>
         <div>
-        <% if(isAuthenticated) { %> 
-            <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/logout">Logout</a></button> 
-        <% } else { %>
-            <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/login">Login</a></button>
-        <% } %>
-        <button id="navbar-toggler" class="ml-2"><i class="fa-xl fa-solid fa-bars"></i></button>
+            <% if(isAuthenticated) { %> 
+                <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/logout">Logout</a></button> 
+            <% } else { %>
+                <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/login">Login</a></button>
+            <% } %>
+            <button id="navbar-toggler" class="ml-2 md:hidden"><i class="fa-xl fa-solid fa-bars"></i></button>
         </div>
     </nav>

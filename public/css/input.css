@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 ul.active{
-    display: flex !important;
-    flex-direction: column;
-    width: 100%;
+    position: fixed;
+    top: 108px;
+    display: block;
+    transform: translateY(0px);
+    transition-duration: 0.5s;
+    width: calc(100% - 16px);
+    background-color: black;
+    text-align: center;
+}
+ul.active a {
+    display: block;
+    padding: 16px;
+}
+ul.active a:hover{
+    background-color: rgb(10, 10, 10);
 }

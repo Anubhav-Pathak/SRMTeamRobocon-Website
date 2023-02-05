@@ -18,14 +18,22 @@
                         <li>Date of Joining: <%= member.doj.toLocaleDateString() %></li>
                         <li></li>
                     </ul>
-                    <ul class="flex items-center gap-4 mt-8">
-                        <li><a href="/admin/edit-member/<%= member._id %>?edit=true" class="border-2 border-black py-1 px-4 rounded-sm">Edit</a></li>
+                    <ul class="flex gap-4 mt-8">
+                        <li><a href="/admin/edit-member/<%= member._id %>?edit=true"><i class="fa-xl fa-solid fa-pen-to-square"></i></a></li>
                         <li>
                             <form action="/admin/delete-member" method="POST" class="m-0 p-0">
                                 <input type="hidden" value="<%= member._id %>" name="memberId">
-                                <button class="bg-black text-white py-1 px-4 rounded-sm" type="submit">Delete</button>
+                                <button type="submit"><i class="fa-xl fa-solid fa-trash"></i></button>
                             </form>
                         </li>
+                        <% if(admin.position === "Team lead") { %>
+                            <li>
+                                <form action="/admin/add-alumni" method="POST" class="m-0 p-0">
+                                    <input type="hidden" value="<%= member._id %>" name="memberId">
+                                    <button type="submit"><i class="fa-xl fa-solid fa-medal"></i></button>
+                                </form>
+                            </li>
+                        <% } %>
                     </ul>
                 </article>
             <% } %>
