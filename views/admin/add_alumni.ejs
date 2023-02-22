@@ -1,0 +1,28 @@
+<%- include("../includes/header.ejs") %>
+
+<main class="min-h-[85vh] flex flex-col justify-center items-center px-2 py-12">
+
+    <form action="/admin/add-alumni" method="POST" class="flex flex-col gap-2 p-4 border-2 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-4"><%= member.name %></h1>
+        <div class="form-control">
+            <label for="quote" class="block"> Quote: </label>
+            <textarea id="quote" name="quote" class="outline-none w-full resize-none border-2 rounded-sm" rows="2"></textarea>
+        </div>
+
+        <div class="form-control">
+            <label for="experience" class="block"> Describe your experience at Robocon: </label>
+            <textarea type="text" id="experience" name="experience" class="outline-none w-full resize-none border-2 rounded-sm" rows="5"></textarea>
+        </div>
+        <div class="form-control">
+            <label for="about" class="block"> About: </label>
+            <textarea type="text" id="about" name="about" class="outline-none w-full resize-none border-2 rounded-sm" rows="3"></textarea>
+        </div>
+
+        
+        <input type="hidden" value="<%= member.id %>" name="memberId">
+        <input type="submit" value="Add Alumni" class="bg-black text-white rounded-sm p-2 cursor-pointer">
+    
+    </form>
+</main>
+
+<%- include("../includes/footer.ejs") %>
