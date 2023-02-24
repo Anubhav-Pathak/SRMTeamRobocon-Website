@@ -1,6 +1,8 @@
 import Member from "../models/member.mjs";
+import Alumni from "../models/alumni.mjs";
 import bcrypt from "bcryptjs";
 import moment from "moment/moment.js";
+
 
 export const getHome = (req, res, next) => {
     res.render("admin/home", {
@@ -101,5 +103,26 @@ export const postDeleteMember = (req, res, next) => {
     const memberId = req.body.memberId;
     Member.deleteOne({_id: memberId})
     .then(() => res.redirect("/admin/team"))
+    .catch(e => console.log(e));
+}
+
+export const getAddAlumni = (req, res, next) => {
+    const memberId = req.params.memberId;
+    Member.findById(memberId)
+    .then((member) => {
+        return res.render("admin/add_alumni", {
+            docTitle: "Add Alumni",
+            member: member
+        })
+    })
+    .catch(e => console.log(e))
+}
+
+export const postAddAlumni = (req, res, next) => {
+    const memberId = req.body.memberId;
+    Alumni.create({quote: "a", description: ["a", "a"]}).populate("memberId")
+    .then(() => {
+        console.log("Alumni Created");
+    })
     .catch(e => console.log(e));
 }
