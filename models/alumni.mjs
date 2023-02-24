@@ -2,7 +2,7 @@ import mongoose, { Schema, SchemaType } from "mongoose";
 
 const alumniSchema = mongoose.Schema({
     memberId: {
-        type: Schema.Types.ObjectId, 
+        type: Object, 
         required: true,
         ref: "member",
     },

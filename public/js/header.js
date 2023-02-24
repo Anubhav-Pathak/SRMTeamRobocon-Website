@@ -4,6 +4,3 @@ const menu = document.getElementById("menu");
 navbarToggler.addEventListener("click", ()=>{
     menu.classList.toggle("active");
 });
-navbarToggler.addEventListener("focusout", ()=>{
-    if(!menu.focus())
-});

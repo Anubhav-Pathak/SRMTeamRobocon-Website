@@ -11,7 +11,8 @@ export const getHome = (req, res, next) => {
 }
 
 export const getTeam = (req, res, next) => {
-    Member.find({domain: req.admin.domain})
+    const query = req.admin.position === "Team lead" ? {} : {domain: req.admin.domain};
+    Member.find(query)
     .then(members =>{
         res.render("admin/team", {
             docTitle: `Admin | Members`,
@@ -120,9 +121,50 @@ export const getAddAlumni = (req, res, next) => {
 
 export const postAddAlumni = (req, res, next) => {
     const memberId = req.body.memberId;
-    Alumni.create({quote: "a", description: ["a", "a"]}).populate("memberId")
+    Member.findById(memberId)
+    .then((member) => {
+        const alumni  = new Alumni({
+            memberId: {...member},
+            quote: req.body.quote,
+            description: [req.body.about, req.body.experience]
+        })
+        return alumni.save();
+    })
     .then(() => {
-        console.log("Alumni Created");
+        return Member.findByIdAndDelete(memberId)
+    })
+    .then(()=>{
+        return res.redirect("/admin/alumni");
+    })
+    .catch(e => console.log(e))
+}
+
+export const getAlumni = (req, res, next) => {
+    Alumni.find()
+    .then(alumnis => {
+        res.render("admin/alumni", {
+            docTitle: `Admin | Alumni`,
+            alumnis: alumnis
+        })
     })
     .catch(e => console.log(e));
+}
+
+export const postDeleteAlumni = (req, res, next) => {
+    const alumniId = req.body.alumniId;
+    Alumni.findByIdAndDelete(alumniId)
+    .then(() => res.redirect("/admin/alumni"))
+    .catch(e => console.log(e));
+}
+
+export const getDetailsAlumni = (req, res, next) => {
+    const alumniId = req.params.alumniId;
+    Alumni.findById(alumniId)
+    .then(alumni => {
+        res.render("admin/alumni_details", {
+            docTitle: `Admin | Alumni`,
+            alumni: alumni
+        });
+    })
+    .catch(e => console.log(e))
 }
