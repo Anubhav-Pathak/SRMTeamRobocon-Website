@@ -24,10 +24,20 @@ module.exports = {
           '75%' : {top: '-14rem'},
           '100%' : {top: '-12rem'}
         },
+        go: {
+          '0%' : {scale: 1},
+          '100%': {scale: 0, display: 'none'},
+        },
+        come: {
+          '0%' : {scale: 0, display: 'block'},
+          '100%': {scale: 1},
+        }
       },
       animation: {
         'jumping-bot1': 'jump1 .7s ease-in',
-        'jumping-bot2': 'jump2 .7s ease-in'
+        'jumping-bot2': 'jump2 .7s ease-in',
+        'icon-go': 'go .2s ease-in forwards',
+        'icon-come': 'come .2s ease-in forwards'
       }
     },
   },
