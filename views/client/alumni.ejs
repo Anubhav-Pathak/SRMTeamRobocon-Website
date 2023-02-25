@@ -1,0 +1,38 @@
+<%- include("../includes/header.ejs") %>
+
+<main class="flex flex-col text-center px-2 py-12">
+    
+    <h1 class="text-4xl mb-4">Meet Our Alumnis</h1>
+    <p>The ones who have made our team what it is today and help us reach new heights through their unwavering support.</p>
+    <p class="mb-12">Our alumni present us with a unique opportunity to build a foundation of support to be a strong team.</p>
+
+    <section class="mb-12 flex flex-wrap gap-8 items-center justify-evenly">
+        <% for(alumni of alumnis) { %>
+            <article class="relative flip-card h-[400px] w-96 rounded-md duration-500 hover:-translate-y-2 hover:bg-black hover:text-white">
+                <div class="flip-card-inner border-2 rounded-md shadow-md ">
+                    <div class="flip-card-front  flex flex-col items-center p-2">
+                        <img src="/images/people/<%= alumni.memberId.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
+                        <h3 class="text-lg font-bold"><%= alumni.memberId.name %></h3>
+                        <p><%= alumni.memberId.position %></p>
+                        <q class="my-2"><%= alumni.description[1] %></q>
+                        <ul class="flex gap-4 mt-4">
+                            <li><a href="<%= alumni.memberId.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
+                            <li><a href="<%= alumni.memberId.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="flip-card-back rounded-md p-2 flex flex-col gap-2">
+                        <h1 class="text-xl font-bold">John Doe</h1>
+                        <p><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></p>
+                        <q class=""><%= alumni.quote %></q>
+                        <p class=""><%= alumni.description[1] %></p>
+                        <p><%= alumni.description[0] %></p>
+                    </div>
+                </div>
+                <button class="absolute bottom-2 right-2 flip-button">Read more &#8594;</button>
+            </article>
+        <% } %>
+    </section>
+
+</main>
+
+<%- include("../includes/footer.ejs") %>

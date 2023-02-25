@@ -1,4 +1,5 @@
 import Member from "../models/member.mjs";
+import Alumni from "../models/alumni.mjs";
 
 export const getHome = (req, res, next) => {
     res.render("client/home", {
@@ -22,7 +23,7 @@ export const getTeam = (req, res, next) => {
     })
     .then(() => {
         res.render("client/team", {
-            docTitle: "SRMTeamRobocon",
+            docTitle: "Our Team",
             path: "/team",
             board: board,
             sambed: sambed,
@@ -32,4 +33,15 @@ export const getTeam = (req, res, next) => {
         });
     })
     .catch(e => console.log(e));
+}
+
+export const getAlumni = (req, res, next) => {
+    Alumni.find()
+    .then((alumnis)=>{
+        res.render("client/alumni", {
+            docTitle: "Our Alumnis",
+            path: "/alumnis",
+            alumnis: alumnis
+        })
+    })
 }
