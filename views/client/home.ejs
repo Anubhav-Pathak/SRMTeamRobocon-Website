@@ -1,12 +1,50 @@
 <%- include("../includes/header.ejs") %>
 
-<main class="min-h-screen  bg-white ">
-    <section class="pt-24">
-        <div class="w-full"><img class="w-full" src="images\CarouselImage1.png" alt="" srcset=""></div>
-        <div>
-            <h1 class="orbitron_font">Lorem Ipsum</h1>
-            <h2 class="orbitron_font">Dolor sit amet consecutur adispiscis</h2>
-            <p>Luckily friends do ashamed to do suppose. Tried meant mr smile so. Exquisite behaviour as to middleton perfectly. Chicken no wishing waiting am. Say concerns dwelling graceful six humoured. Whether mr up savings talking an. Active mutual nor father mother exeter change six did all. </p>
+<main class="min-h-screen flex flex-col justify-center text-center bg-dark-blue">
+    <section class="pb-20 md:pb-0 min-h-screen flex flex-col md:flex-row items-center">
+        <div class="w-3/4 mt-56 visible md:hidden"><img src="images\bot.png" alt=""></div>
+        <div class="w-3/4 mt-20 md:mt-60 md:ml-28 md:w-1/2 md:flow-root">
+            <h1 class="text-4xl md:text-6xl font-bold text-white md:float-left">Lorem ipsum dolor sit </h1>
+            <h1 class="text-4xl md:text-6xl font-bold text-white md:float-left">amet, consectetur </h1>
+            <p class="text-2xl md:text-3xl text-white md:float-left mt-9">eiusmod tempor incididunt ut labore et dolore</p>
+            <p class="text-2xl md:text-3xl text-white md:float-left">magna aliqua. Ut enim ad minim </p>
+            <div class="text-white md:w-1/2 flex flex-wrap flex-col md:flex-row md:flex-nowrap justify-around md:justify-start pt-20">
+                <span class="p-5 md:p-0 md:ml-5"><div class="text-5xl font-semibold ml-5 mb-3" id="members_count">0+</div><div class="text-xl font-semibold">Members</div></span>
+                <span class="p-5 md:p-0 md:ml-16"><div class="text-5xl font-semibold ml-5 mb-3" id="participations_count">0+</div><div class="text-xl font-semibold">Participations</div></span>
+                <span class="p-5 md:p-0 md:ml-16"><div class="text-5xl font-semibold ml-5 mb-3" id="robots_count">0+</div><div class="text-xl font-semibold">Robots</div></span>
+                <span class="p-5 md:p-0 md:ml-16"><div class="text-5xl font-semibold ml-5 mb-3" id="alumini_count">0+</div><div class="text-xl font-semibold">Alumini</div></span>
+            </div>
+        </div>
+        <div class="hidden ml-12 w-himg mt-56 md:block" id="hero_image"><img src="images\bot.png" alt=""></div>
+    </section>
+    <section class="min-h-screen flex flex-col items-center justify-center bg-black pt-10" id="abu_section">
+        <h1 class="text-3xl md:text-5xl font-bold text-white m-10 text_eurofighter">ABU Robocon 2023</h1>
+        <img class="abu_image w-4/5 md:w-2/5" src="images\ABU.png" alt="" srcset="">
+        <div class="text-robo-red m-10 text-2xl md:text-4xl text_orbitron " id="countdown"></div>
+        <button class="text-1xl md:text-3xl text_eurofighter text-blue-500 hover:text-blue-200">Read More >></button>
+    </section>
+    <section class="pb-28">
+        <div class="flex flex-col md:flex-row mt-0 mr-0 items-center md:mt-56 md:mr-24">
+            <div class="mt-20 md:mt-0 md:ml-28 relative">
+                <img src="images\image1.png" alt="" class="p-7 md:p-0 md:w-img relative z-10">
+                <img src="images\robo1.png" alt="" class="w-60 absolute -top-40 left-bot1 hidden md:block" id="bot-1">
+            </div>
+            <div class="w-5/6 md:w-1/2 text-white md:ml-32 md:text-left divide-y-4 divide-robo-red mt-16">
+                <h2 class="text-5xl font-semibold text_eurofighter">Our Mission</h2>
+                <p class="pt-7 mt-4 text-2xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
+        </div>
+        <div class="flex flex-col items-center md:flex-row mt-20 md:mt-56 md:ml-24">
+            <div class="md:mr-28 relative block md:hidden">
+                <img src="images\image2.png" alt="" class="md:w-img relative z-10 p-7 md:p-0">
+                <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2 hidden">
+            </div>
+            <div class="w-5/6 md:w-1/2 text-white md:mr-32 md:text-right divide-y-4 divide-robo-red mt-16">
+                <h2 class="text-5xl font-semibold text_eurofighter">Our Vision</h2>
+                <p class="pt-7 mt-4 text-2xl ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
+            <div class="mr-28 relative flex invisible md:visible">
+                <img src="images\image2.png" alt="" class=" w-img relative z-10">
+                <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2 hidden md:block" id="bot-2">
+            </div>
         </div>
     </section>
 </main>

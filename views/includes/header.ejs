@@ -14,25 +14,27 @@
 
     <script defer src="/js/header.js"></script>
     <script defer src="/js/client.js"></script>
+    <script src="/js/home.js"></script>
+    <script defer src="/js/particles.min.js"></script>
     
     <title> <%= docTitle %> </title>
 </head>
 <body>
     <div class="w-full h-screen backdrop-blur-sm fixed hidden" id="overlay"></div>
-    <nav class="flex items-center justify-between px-2 h-[100px] bg-black text-white fixed w-full">
+    <nav class="flex items-center justify-between px-2 h-[100px] bg-black text-white fixed w-full z-50">
         
         <% if(isAuthenticated) { %> 
             <p><%= admin.name %></p>
         <% } else { %>
-            <img src="#" alt="Logo">
+            <img class="w-36 ml-5 md:w-52 md:ml-10" src="images\SRMTEAMROBOCON.png" alt="Logo">
         <% } %>
 
-        <ul id="menu" class="md:flex md:gap-x-4 -translate-y-[100vh] md:-translate-y-0">
+        <ul id="menu" class="md:flex md:gap-x-11 -translate-y-[100vh] md:-translate-y-0 text_eurofighter ">
             <% if(!isAuthenticated) { %>
-                <li><a href="/">Home</a></li>
-                <li><a href="/team">Our Team</a></li>
-                <li><a href="/achievements">Achievements</a></li>
-                <li><a href="/alumni">Alumni</a></li>
+                <li><a class="hover:text-robo-red" href="/">Home</a></li>
+                <li><a class="hover:text-robo-red" href="/team">Our Team</a></li>
+                <li><a class="hover:text-robo-red" href="/achievements">Achievements</a></li>
+                <li><a class="hover:text-robo-red" href="/alumni">Alumni</a></li>
             <% } else { %>
                 <li><a href="/admin/">Panel</a></li>
                 <li><a href="/admin/task">Tasks</a></li>
@@ -49,11 +51,11 @@
             <% } %>
         </ul>
         <div class="flex">
-            <% if(isAuthenticated) { %> 
+            <!-- <% if(isAuthenticated) { %> 
                 <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/logout">Logout</a></button> 
             <% } else { %>
-                <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black"><a href="/login">Login</a></button>
-            <% } %>
+                <button class="px-2 py-1 border-2 rounded-sm hover:bg-white hover:text-black mr-10"><a href="/login">Login</a></button>
+            <% } %> -->
             <!-- <button id="navbar-toggler" class="ml-2 md:hidden"><i id="menu-icon" class="fa-xl fa-solid fa-bars"></i></button> -->
             <button id="navbar-toggler" class="ml-2 md:hidden menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
                 <svg width="50" height="50" viewBox="0 0 100 100">

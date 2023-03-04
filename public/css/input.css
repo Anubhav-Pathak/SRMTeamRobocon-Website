@@ -120,4 +120,47 @@ ul.active a:hover{
     font-family: 'Orbitron', sans-serif;
   }
 
+  @font-face {
+    font-family: "euroFighter";
+    src: url("../fonts/eurofighter.ttf");
+  }
+
+  .text_eurofighter{
+    font-family: euroFighter;
+  }
+
+  @font-face {
+    font-family: "orbitron";
+    src: url("../fonts/Orbitron-Bold.ttf");
+  }
+
+  .text_orbitron{
+    font-family: orbitron;
+  }
+
+  .abu_image {
+    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+  }
+
+  #abu_section{
+    background-image: url(../images/ABU_Robocon.png);
+    background-size: cover;
+
+    min-height: 100vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .abu_box{
+    border-radius: 50px;
+  }
+
+  #design1 {
+    width: 100vw;
+  }
+
   /* HOME CSS STOP */
