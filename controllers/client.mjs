@@ -1,5 +1,6 @@
 import Member from "../models/member.mjs";
 import Alumni from "../models/alumni.mjs";
+import Achievements from "../models/achievements.mjs";
 
 export const getHome = (req, res, next) => {
     res.render("client/home", {
@@ -42,6 +43,17 @@ export const getAlumni = (req, res, next) => {
             docTitle: "Our Alumnis",
             path: "/alumnis",
             alumnis: alumnis
+        })
+    })
+}
+
+export const getAchievements = (req, res, next) => {
+    Achievements.find()
+    .then((achievements)=>{
+        res.render("client/achievement", {
+            docTitle: "Our Achievements",
+            path: "/achievements",
+            achievements: achievements
         })
     })
 }
