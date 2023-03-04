@@ -111,3 +111,13 @@ ul.active a:hover{
     stroke-width: 6;
   }
   
+
+  /* HOME CSS  START*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+  .orbitron_font {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  /* HOME CSS STOP */
