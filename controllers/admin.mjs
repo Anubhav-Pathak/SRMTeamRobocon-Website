@@ -1,5 +1,6 @@
 import Member from "../models/member.mjs";
 import Alumni from "../models/alumni.mjs";
+import Achievements from "../models/achievements.mjs";
 import bcrypt from "bcryptjs";
 import moment from "moment/moment.js";
 
@@ -167,4 +168,26 @@ export const getDetailsAlumni = (req, res, next) => {
         });
     })
     .catch(e => console.log(e))
+}
+
+export const getAchievements = (req, res, next) => {
+    Achievements.find()
+    .then((achievements)=>{
+        res.render("admin/achievement", {
+            docTitle: "Admin | Achievements",
+            path: "/admin/achievements",
+            achievements: achievements
+        })
+    })
+}
+
+export const getAddAchievements = (req, res, next) => {
+    res.render("admin/achievement", {
+        docTitle: "Admin | Achievements",
+        path: "/admin/achievements"
+    });
+}
+
+export const postAddAchievements = (req, res, next) => {
+    
 }
