@@ -2,27 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-ul.active{
-    position: fixed;
-    top: 108px;
-    display: block;
-    transform: translateY(0px);
-    transition-duration: 0.5s;
-    width: calc(100% - 16px);
-    background-color: black;
-    text-align: center;
+ul.active {
+  position: fixed;
+  top: 108px;
+  display: block;
+  transform: translateY(0px);
+  transition-duration: 0.5s;
+  width: calc(100% - 16px);
+  background-color: black;
+  text-align: center;
 }
+
 ul.active a {
-    display: block;
-    padding: 16px;
+  display: block;
+  padding: 16px;
 }
-ul.active a:hover{
-    background-color: rgb(10, 10, 10);
+
+ul.active a:hover {
+  background-color: rgb(10, 10, 10);
 }
 
 .flip-card {
-    perspective: 1000px;
+  perspective: 1000px;
 }
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -30,39 +33,44 @@ ul.active a:hover{
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-.flip-card-front, .flip-card-back {
+
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
 .flip-card-back {
   transform: rotateY(180deg);
 }
 
 .switch {
-    animation: switch .2s ease-in;
+  animation: switch .2s ease-in;
 }
 
 @keyframes switch {
-    0% {
-        scale: 1;
-    }
-    50% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
-    }
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .unhide {
-    display: block;
+  display: block;
 }
 
 
@@ -70,97 +78,128 @@ ul.active a:hover{
 
 
 .menu {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    padding: 0;
-  }
-  .line {
-    fill: none;
-    stroke: white;
-    stroke-width: 6;
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .line1 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-  }
-  .line2 {
-    stroke-dasharray: 60 60;
-    stroke-width: 6;
-  }
-  .line3 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-  }
-  .opened .line1 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 6;
-  }
-  .opened .line2 {
-    stroke-dasharray: 1 60;
-    stroke-dashoffset: -30;
-    stroke-width: 6;
-  }
-  .opened .line3 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 6;
-  }
-  
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
 
-  /* HOME CSS  START*/
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
 
-  .orbitron_font {
-    font-family: 'Orbitron', sans-serif;
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+
+/* HOME CSS  START*/
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.orbitron_font {
+  font-family: 'Orbitron', sans-serif;
+}
+
+@font-face {
+  font-family: "euroFighter";
+  src: url("../fonts/eurofighter.ttf");
+}
+
+.text_eurofighter {
+  font-family: euroFighter;
+}
+
+@font-face {
+  font-family: "orbitron";
+  src: url("../fonts/Orbitron-Bold.ttf");
+}
+
+.text_orbitron {
+  font-family: orbitron;
+}
+
+.abu_image {
+  box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+#abu_section {
+  background-image: url(../images/ABU_Robocon.png);
+  background-size: cover;
+
+  min-height: 100vh;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* bot animations */
+
+@keyframes jump1 {
+  0% {
+    top: 0rem; left: 25rem
+  }75% {
+    top: -11rem; left: 31.5rem
+  }100% {
+    top: -10rem; left: 31rem
   }
+}
 
-  @font-face {
-    font-family: "euroFighter";
-    src: url("../fonts/eurofighter.ttf");
+.jumping_bot1{
+  animation: jump1 .7s ease-in ;
+}
+
+@keyframes jump2 {
+  0% {
+    top: 0rem;
+  }75% {
+    top: -14rem;
+  }100% {
+    top: -12rem;
   }
+}
 
-  .text_eurofighter{
-    font-family: euroFighter;
-  }
+.jumping_bot2{
+  animation: jump2 .7s ease-in ;
+}
 
-  @font-face {
-    font-family: "orbitron";
-    src: url("../fonts/Orbitron-Bold.ttf");
-  }
 
-  .text_orbitron{
-    font-family: orbitron;
-  }
 
-  .abu_image {
-    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
-    border-radius: 10px;
-  }
-
-  #abu_section{
-    background-image: url(../images/ABU_Robocon.png);
-    background-size: cover;
-
-    min-height: 100vh;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .abu_box{
-    border-radius: 50px;
-  }
-
-  #design1 {
-    width: 100vw;
-  }
-
-  /* HOME CSS STOP */
+/* HOME CSS STOP */

@@ -92,7 +92,7 @@ window.addEventListener('load', function () {
     const robo1_callback = (entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                robo1.classList.add("animate-jumping-bot1")
+                robo1.classList.add("jumping_bot1")
             }
         })
     }
@@ -109,7 +109,7 @@ window.addEventListener('load', function () {
     const robo2_callback = (entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                robo2.classList.add("animate-jumping-bot2")
+                robo2.classList.add("jumping_bot2")
             }
         })
     }
