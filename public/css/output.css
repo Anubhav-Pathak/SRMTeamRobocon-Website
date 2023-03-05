@@ -603,10 +603,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -651,16 +647,16 @@ video {
   margin-right: 7rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mr-10 {
   margin-right: 2.5rem;
 }
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .block {
@@ -743,10 +739,6 @@ video {
   width: 42rem;
 }
 
-.w-36 {
-  width: 9rem;
-}
-
 .w-72 {
   width: 18rem;
 }
@@ -757,6 +749,10 @@ video {
 
 .w-11 {
   width: 2.75rem;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .max-w-xs {
@@ -770,45 +766,6 @@ video {
 .-translate-y-\[100vh\] {
   --tw-translate-y: -100vh;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-@keyframes jump1 {
-  0% {
-    top: 0rem;
-    left: 25rem;
-  }
-
-  75% {
-    top: -11rem;
-    left: 31.5rem;
-  }
-
-  100% {
-    top: -10rem;
-    left: 31rem;
-  }
-}
-
-.animate-jumping-bot1 {
-  animation: jump1 .7s ease-in;
-}
-
-@keyframes jump2 {
-  0% {
-    top: 0rem;
-  }
-
-  75% {
-    top: -14rem;
-  }
-
-  100% {
-    top: -12rem;
-  }
-}
-
-.animate-jumping-bot2 {
-  animation: jump2 .7s ease-in;
 }
 
 .cursor-pointer {
@@ -1091,14 +1048,14 @@ video {
   outline-offset: 2px;
 }
 
-.backdrop-blur-sm {
-  --tw-backdrop-blur: blur(4px);
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.backdrop-blur-md {
-  --tw-backdrop-blur: blur(12px);
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -1107,7 +1064,7 @@ video {
   transition-duration: 500ms;
 }
 
-ul.active{
+ul.active {
   position: fixed;
   top: 108px;
   display: block;
@@ -1123,7 +1080,7 @@ ul.active a {
   padding: 16px;
 }
 
-ul.active a:hover{
+ul.active a:hover {
   background-color: rgb(10, 10, 10);
 }
 
@@ -1139,7 +1096,8 @@ ul.active a:hover{
   transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1190,7 +1148,7 @@ ul.active a:hover{
   stroke: white;
   stroke-width: 6;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line1 {
@@ -1238,7 +1196,7 @@ ul.active a:hover{
   src: url("../fonts/eurofighter.ttf");
 }
 
-.text_eurofighter{
+.text_eurofighter {
   font-family: euroFighter;
 }
 
@@ -1248,7 +1206,7 @@ ul.active a:hover{
   src: url("../fonts/Orbitron-Bold.ttf");
 }
 
-.text_orbitron{
+.text_orbitron {
   font-family: orbitron;
 }
 
@@ -1257,7 +1215,7 @@ ul.active a:hover{
   border-radius: 10px;
 }
 
-#abu_section{
+#abu_section {
   background-image: url(../images/ABU_Robocon.png);
   min-height: 100vh;
   background-attachment: fixed;
@@ -1266,12 +1224,45 @@ ul.active a:hover{
   background-size: cover;
 }
 
-.abu_box{
-  border-radius: 50px;
+/* bot animations */
+
+@keyframes jump1 {
+  0% {
+    top: 0rem;
+    left: 25rem
+  }
+
+  75% {
+    top: -11rem;
+    left: 31.5rem
+  }
+
+  100% {
+    top: -10rem;
+    left: 31rem
+  }
 }
 
-#design1 {
-  width: 100vw;
+.jumping_bot1{
+  animation: jump1 .7s ease-in ;
+}
+
+@keyframes jump2 {
+  0% {
+    top: 0rem;
+  }
+
+  75% {
+    top: -14rem;
+  }
+
+  100% {
+    top: -12rem;
+  }
+}
+
+.jumping_bot2{
+  animation: jump2 .7s ease-in ;
 }
 
 /* HOME CSS STOP */
