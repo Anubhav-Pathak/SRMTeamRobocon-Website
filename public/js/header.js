@@ -10,7 +10,6 @@ navbarToggler.addEventListener("click", ()=>{
         menuIcon.classList.replace("fa-bars", "fa-times");
     }else {
         menuIcon.classList.replace("fa-times", "fa-bars");
-        // menuIcon.classList.remove("switch");
     }
     menuIcon.classList.add("switch");
 });

@@ -1,28 +1,37 @@
 <%- include("../includes/header.ejs") %>
 
-<main class="min-h-screen flex flex-col justify-center text-center bg-dark-blue">
-    <section class="pb-20 md:pb-0 min-h-screen flex flex-col md:flex-row items-center">
-        <div class="w-3/4 mt-56 visible md:hidden"><img src="images\bot.png" alt=""></div>
-        <div class="w-3/4 mt-20 md:mt-60 md:ml-28 md:w-1/2 md:flow-root">
-            <h1 class="text-4xl md:text-6xl font-bold text-white md:float-left">Lorem ipsum dolor sit </h1>
-            <h1 class="text-4xl md:text-6xl font-bold text-white md:float-left">amet, consectetur </h1>
-            <p class="text-2xl md:text-3xl text-white md:float-left mt-9">eiusmod tempor incididunt ut labore et dolore</p>
-            <p class="text-2xl md:text-3xl text-white md:float-left">magna aliqua. Ut enim ad minim </p>
-            <div class="text-white md:w-1/2 flex flex-wrap flex-col md:flex-row md:flex-nowrap justify-around md:justify-start pt-20">
-                <span class="p-5 md:p-0 md:ml-5"><div class="text-5xl font-semibold ml-5 mb-3" id="members_count">0+</div><div class="text-xl font-semibold">Members</div></span>
-                <span class="p-5 md:p-0 md:ml-16"><div class="text-5xl font-semibold ml-5 mb-3" id="participations_count">0+</div><div class="text-xl font-semibold">Participations</div></span>
-                <span class="p-5 md:p-0 md:ml-16"><div class="text-5xl font-semibold ml-5 mb-3" id="robots_count">0+</div><div class="text-xl font-semibold">Robots</div></span>
-                <span class="p-5 md:p-0 md:ml-16"><div class="text-5xl font-semibold ml-5 mb-3" id="alumini_count">0+</div><div class="text-xl font-semibold">Alumini</div></span>
-            </div>
+<main class="pt-[100px] bg-dark-blue">
+    
+    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-100px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8 text-white text_orbitron">
+        
+        <article class="">
+            <h1 class="text-4xl text_eurofighter">Lorem <span class="text-red-600">ipsum</span> dolor sit </h1>
+            <p class="mt-4 text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vel! Culpa recusandae harum voluptates id? Suscipit recusandae laboriosam nobis eligendi!</p>
+            <button class="mt-8 bg-red-600 shadow-white shadow-sm px-4 py-2 md:px-8 md:py-4 rounded font-bold hover:bg-red-700"><a href="#">View More</a></button>
+        </article>
+        
+        <img src="images/Robot.webp" alt="Robot" loading="lazy">
+        
+        <div class="col-span-full mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-center text-md md:text-2xl">
+            <div class=""><span id="members_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Members</caption></div>
+            <div class=""><span id="participations_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Participations</caption></div>
+            <div class=""><span id="robots_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Robots</caption></div>
+            <div class=""><span id="alumini_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Alumnis</caption></div>
         </div>
-        <div class="hidden ml-12 w-himg mt-56 md:block" id="hero_image"><img src="images\bot.png" alt=""></div>
+
     </section>
-    <section class="min-h-screen flex flex-col items-center justify-center bg-black pt-10" id="abu_section">
-        <h1 class="text-3xl md:text-5xl font-bold text-white m-10 text_eurofighter">ABU Robocon 2023</h1>
-        <img class="abu_image w-4/5 md:w-2/5" src="images\ABU.png" alt="" srcset="">
-        <div class="text-robo-red m-10 text-2xl md:text-4xl text_orbitron " id="countdown"></div>
-        <button class="text-1xl md:text-3xl text_eurofighter text-blue-500 hover:text-blue-200">Read More >></button>
-    </section>
+
+    <!-- <section class="px-4 py-12 text-white text_orbitron" id="abu_section">
+        
+        <div class="mx-auto max-w-7xl">
+            <h1 class="text-4xl text_eurofighter mb-4">ABU Robocon <span class="text-red-600">2023</span></h1>
+            <img class="" src="images\ABU.png" alt="ABU Robocon Poster" loading="lazy">
+            <div class="" id="countdown"></div>
+            <button class="">Read More >></button>
+        </div>
+
+    </section> -->
+
     <section class="pb-28">
         <div class="flex flex-col md:flex-row mt-0 mr-0 items-center md:mt-56 md:mr-24">
             <div class="mt-20 md:mt-0 md:ml-28 relative">

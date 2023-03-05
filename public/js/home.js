@@ -6,8 +6,8 @@ window.addEventListener('load', function () {
     var robots_count = document.getElementById("robots_count");
     var alumini_count = document.getElementById("alumini_count");
 
-    function increase(element = {}, x) {
-        let counts = setInterval(updated);
+    function increase(element = {}, x, speed) {
+        let counts = setInterval(updated,speed);
         let upto = 0;
 
         function updated() {
@@ -17,20 +17,6 @@ window.addEventListener('load', function () {
             }
         }
     }
-
-    // function increase(element, x){
-    //     for(let i=0; i<=x; i++){
-    //         setTimeout(() => {
-    //             element.innerHTML = i + "+";
-    //         }, 1000);
-    //     }
-
-    // }
-
-    // increase(members_count, 65);
-    // increase(participations_count, 6);
-    // increase(robots_count, 11);
-    // increase(alumini_count, 100);
 
     // Date count down
     var countDownDate = new Date("Aug 27, 2023 00:00:00").getTime();
@@ -63,11 +49,11 @@ window.addEventListener('load', function () {
 
     // Counters
 
-    function count_intersection_animation(element, x){
+    function count_intersection_animation(element, x, speed){
         const callback = (entries, observer) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    increase(element, x);
+                    increase(element, x, speed);
                 }
             })
         }
@@ -81,10 +67,10 @@ window.addEventListener('load', function () {
         myObserver.observe(element)
     }
 
-    count_intersection_animation(members_count, 65)
-    count_intersection_animation(participations_count, 6)
-    count_intersection_animation(robots_count, 11)
-    count_intersection_animation(alumini_count, 100)
+    count_intersection_animation(members_count, 65,10)
+    count_intersection_animation(participations_count, 6,200)
+    count_intersection_animation(robots_count, 11,100)
+    count_intersection_animation(alumini_count, 100,10)
 
 
     // Robo character intersection observer animations
