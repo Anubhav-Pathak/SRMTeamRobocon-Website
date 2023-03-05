@@ -1,5 +1,5 @@
 import express from "express";
-import { getAddAlumni, getAddMember, getAlumni, getDetailsAlumni, getEditMember, getHome, getTeam, postAddAlumni, postAddMember, postDeleteAlumni, postDeleteMember, postEditMember } from "../controllers/admin.mjs";
+import { getAchievements, getAddAlumni, getAddMember, getAlumni, getDetailsAlumni, getEditMember, getHome, getTeam, postAddAlumni, postAddMember, postDeleteAlumni, postDeleteMember, postEditMember } from "../controllers/admin.mjs";
 import isAuthorized from "../middlewares/isAuthorized.mjs"
 
 const router = express.Router();
@@ -19,5 +19,7 @@ router.get("/add-alumni/:memberId", isAuthorized, getAddAlumni);
 router.post("/add-alumni",isAuthorized, postAddAlumni);
 router.post("/delete-alumni", isAuthorized, postDeleteAlumni);
 router.get("/alumni/:alumniId", isAuthorized, getDetailsAlumni);
+
+router.get("/achievements", isAuthorized, getAchievements);
 
 export default router;
