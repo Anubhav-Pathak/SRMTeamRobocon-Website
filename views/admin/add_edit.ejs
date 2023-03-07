@@ -1,6 +1,6 @@
 <%- include("../includes/header.ejs") %>
 
-<main class="min-h-[85vh] flex flex-col justify-center items-center px-2 py-12">
+<main class="min-h-screen flex flex-col justify-center items-center px-2 pb-12 pt-24">
 
     <form action="/admin/<% if(editing) { %>edit-member?edit=true<% } else { %>add<% } %>" method="POST" class="flex flex-col gap-2 p-4 border-2 rounded-lg shadow-md">
         

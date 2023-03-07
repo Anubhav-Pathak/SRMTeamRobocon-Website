@@ -1,6 +1,8 @@
 import Member from "../models/member.mjs";
 import Alumni from "../models/alumni.mjs";
 import Achievements from "../models/achievements.mjs";
+import Task from "../models/tasks.mjs";
+
 import bcrypt from "bcryptjs";
 import moment from "moment/moment.js";
 
@@ -126,6 +128,7 @@ export const postAddAlumni = (req, res, next) => {
     .then((member) => {
         const alumni  = new Alumni({
             memberId: {...member},
+            passoutYear: req.body.passoutYear,
             quote: req.body.quote,
             description: [req.body.about, req.body.experience]
         })
@@ -143,9 +146,15 @@ export const postAddAlumni = (req, res, next) => {
 export const getAlumni = (req, res, next) => {
     Alumni.find()
     .then(alumnis => {
+        let passoutYears = alumnis.map((alumni)=>alumni.passoutYear);
+        passoutYears = passoutYears.filter((value, index, array) => array.indexOf(value) === index);
+        const passouts = [];
+        passoutYears.forEach((passoutYear)=>{
+            passouts.push({[passoutYear]: alumnis.filter(alumni => alumni.passoutYear === passoutYear)})
+        });
         res.render("admin/alumni", {
             docTitle: `Admin | Alumni`,
-            alumnis: alumnis
+            alumnis: passouts,
         })
     })
     .catch(e => console.log(e));
@@ -182,12 +191,20 @@ export const getAchievements = (req, res, next) => {
 }
 
 export const getAddAchievements = (req, res, next) => {
-    res.render("admin/achievement", {
-        docTitle: "Admin | Achievements",
-        path: "/admin/achievements"
+    res.render("admin/add_achievement", {
+        docTitle: "Admin | Add Achievements",
+        path: "/admin/add-achievement",
+        editing: false,
     });
 }
 
 export const postAddAchievements = (req, res, next) => {
     
+}
+
+export const getAddTasks = (req, res, next) => {
+    res.render("admin/add_tasks", {
+        docTitle: "Admin | Tasks",
+        path: "/admin/task"
+    });
 }

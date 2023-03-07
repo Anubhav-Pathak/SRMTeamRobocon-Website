@@ -1,5 +1,5 @@
 import express from "express";
-import { getAchievements, getAddAlumni, getAddMember, getAlumni, getDetailsAlumni, getEditMember, getHome, getTeam, postAddAlumni, postAddMember, postDeleteAlumni, postDeleteMember, postEditMember } from "../controllers/admin.mjs";
+import { getAchievements, getAddAchievements, getAddAlumni, getAddMember, getAddTasks, getAlumni, getDetailsAlumni, getEditMember, getHome, getTeam, postAddAlumni, postAddMember, postDeleteAlumni, postDeleteMember, postEditMember } from "../controllers/admin.mjs";
 import isAuthorized from "../middlewares/isAuthorized.mjs"
 
 const router = express.Router();
@@ -21,5 +21,8 @@ router.post("/delete-alumni", isAuthorized, postDeleteAlumni);
 router.get("/alumni/:alumniId", isAuthorized, getDetailsAlumni);
 
 router.get("/achievements", isAuthorized, getAchievements);
+router.get("/add-achievement", isAuthorized, getAddAchievements);
+
+router.get("/add-task", isAuthorized, getAddTasks);
 
 export default router;

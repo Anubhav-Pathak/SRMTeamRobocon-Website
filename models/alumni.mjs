@@ -6,6 +6,10 @@ const alumniSchema = mongoose.Schema({
         required: true,
         ref: "member",
     },
+    passoutYear: {
+        type: Number,
+        required: true,
+    },
     quote: Schema.Types.String,
     description: Schema.Types.Array
 });
