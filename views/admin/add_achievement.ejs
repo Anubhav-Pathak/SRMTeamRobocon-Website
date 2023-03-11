@@ -6,13 +6,16 @@
         
         <div class="form-control border-b-2">
             <label for="name" class="block"> Name: </label>
-            <input type="text" id="name" name="name"  value="<% if(editing) { %><%=member.name%><% } else { %><% } %>" placeholder="John Doe" required class="outline-none w-full">
+            <input type="text" id="name" name="name"  value="<% if(editing) { %><%=achievement.name%><% } else { %><% } %>" placeholder="John Doe" required class="outline-none w-full">
         </div>
         <div class="form-control">
-            <label for="experience" class="block"> Description: </label>
-            <textarea type="text" id="experience" name="experience" class="outline-none w-full resize-none border-2 rounded-sm" rows="5" cols="50"></textarea>
+            <label for="description" class="block"> Description: </label>
+            <textarea type="text" id="description" name="description" class="outline-none w-full resize-none border-2 rounded-sm" rows="5" cols="50"><% if(editing) { %><%=achievement.description%><% } else { %><% } %></textarea>
         </div>
-        <input type="submit" value="Add Achievement" class="bg-black text-white rounded-sm p-2 cursor-pointer">
+        <% if (editing) { %>
+            <input type="hidden" value="<%= achievement.id %>" name="achievementId">
+        <% } %>
+        <input type="submit" value="<% if(editing) { %>Update Achievement<% } else { %>Add Achievement<% } %>" class="bg-black text-white rounded-sm p-2 cursor-pointer">
     
     </form>
 </main>

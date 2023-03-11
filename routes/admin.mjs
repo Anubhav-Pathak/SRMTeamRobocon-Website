@@ -1,5 +1,5 @@
 import express from "express";
-import { getAchievements, getAddAchievements, getAddAlumni, getAddMember, getAddTasks, getAlumni, getDetailsAlumni, getEditMember, getHome, getTeam, postAddAlumni, postAddMember, postDeleteAlumni, postDeleteMember, postEditMember } from "../controllers/admin.mjs";
+import { getAchievements, getAddAchievements, getAddAlumni, getAddMember, getAddTasks, getAlumni, getDetailsAlumni, getEditAchievement, getEditMember, getHome, getTeam, postAddAchievement, postAddAlumni, postAddMember, postDeleteAchievement, postDeleteAlumni, postDeleteMember, postEditAchievement, postEditMember } from "../controllers/admin.mjs";
 import isAuthorized from "../middlewares/isAuthorized.mjs"
 
 const router = express.Router();
@@ -22,6 +22,10 @@ router.get("/alumni/:alumniId", isAuthorized, getDetailsAlumni);
 
 router.get("/achievements", isAuthorized, getAchievements);
 router.get("/add-achievement", isAuthorized, getAddAchievements);
+router.post("/add-achievement", isAuthorized, postAddAchievement);
+router.get("/edit-achievement/:achievementId", isAuthorized, getEditAchievement);
+router.post("/edit-achievement", isAuthorized, postEditAchievement);
+router.post("/delete-achievement", isAuthorized, postDeleteAchievement);
 
 router.get("/add-task", isAuthorized, getAddTasks);
 
