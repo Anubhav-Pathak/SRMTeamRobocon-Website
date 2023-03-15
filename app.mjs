@@ -12,7 +12,8 @@ import errorRoute from "./routes/error.mjs";
 
 import Member from "./models/member.mjs";
 
-const MONGODB_URI = "mongodb://127.0.0.1:27017/srmteamrobocon?retryWrites=true&w=majority";
+const MONGODB_URI = "mongodb+srv://m001-student:oyCvs3f25KUffLv4@sandbox.f8vu2.mongodb.net/srmteamrobocon";
+// const MONGODB_URI = "mongodb://127.0.0.1:27017/srmteamrobocon?retryWrites=true&w=majority";
 const PORT = null;
 
 const app = express();
