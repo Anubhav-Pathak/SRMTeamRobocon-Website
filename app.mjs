@@ -11,15 +11,14 @@ import clientRoute from "./routes/client.mjs";
 import errorRoute from "./routes/error.mjs";
 
 import Member from "./models/member.mjs";
-
-const MONGODB_URI = "mongodb+srv://m001-student:oyCvs3f25KUffLv4@sandbox.f8vu2.mongodb.net/srmteamrobocon";
-// const MONGODB_URI = "mongodb://127.0.0.1:27017/srmteamrobocon?retryWrites=true&w=majority";
+const MONGO_URI = process.env.MONGO_URI;
+// const MONGO_URI = "mongodb://127.0.0.1:27017/srmteamrobocon?retryWrites=true&w=majority";
 const PORT = null;
 
 const app = express();
 const MongoDBStore = connectMongoDBSession(session);
 const store = new MongoDBStore({
-    uri: MONGODB_URI,
+    uri: MONGO_URI,
     collection: "sessions",
 })
 
@@ -55,7 +54,7 @@ app.use(clientRoute);
 app.use(errorRoute);
 
 mongoose.set('strictQuery', true);
-mongoose.connect(MONGODB_URI)
+mongoose.connect(MONGO_URI)
 .then(() => {
     console.log("Database Connected !");
     app.listen(PORT || 3000);
