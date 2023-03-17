@@ -1,23 +1,28 @@
 <%- include("../includes/header.ejs") %>
 
-<main class="flex flex-col px-2 py-12">
+<main class="min-h-screen flex flex-col px-2 pb-12 pt-24">
     <section class="flex items-center justify-between mb-12">
         <h1 class="text-xl">Alumnis</h1>
         <button class="border-2 px-4 py-2 bg-black text-white rounded-3xl"><a href="/admin/team"><i class="fa-regular fa-plus"></i>&nbsp;Add Alumni</a></button>
     </section>
-    <section class="min-h-[60vh] flex flex-wrap gap-8 items-center justify-evenly">
+    <section class="block">
         <% if(alumnis.length > 0) { %>
-            <% for(alumni of alumnis) { %>
-                <article class="h flex flex-col max-w-xs border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2">
-                    <img src="/images/people/<%= alumni.memberId.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
-                    <h3 class="text-lg font-bold"><%= alumni.memberId.name %></h3>
-                    <p class="mb-2"><%= alumni.memberId.domain.toUpperCase() %> Alumni</p>
-                    <ul class="">
-                        <li><%= alumni.memberId.email %></li>
-                        <li><%= alumni.memberId.phone %></li>
-                    </ul>
-                    <a href="/admin/alumni/<%= alumni._id %>" class="self-end my-2 p-1 rounded border-black border-2">Read more...</a>
-                </article>
+            <% for(passout of alumnis) { %>
+                <h1 class="mb-4 text-center text-3xl font-bold"><%= Object.keys(passout) %></h1>
+                <section class="mb-8 flex flex-wrap gap-8 items-center justify-evenly">
+                    <% for(alumni of passout[Object.keys(passout)]) {%>
+                        <article class="h flex flex-col max-w-xs border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2">
+                            <img src="/images/people/<%= alumni.memberId.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
+                            <h3 class="text-lg font-bold"><%= alumni.memberId.name %></h3>
+                            <p class="mb-2"><%= alumni.memberId.domain.toUpperCase() %> Alumni</p>
+                            <ul class="">
+                                <li><%= alumni.memberId.email %></li>
+                                <li><%= alumni.memberId.phone %></li>
+                            </ul>
+                            <a href="/admin/alumni/<%= alumni._id %>" class="self-end my-2 p-1 rounded border-black border-2">Read more...</a>
+                        </article>
+                    <% } %>
+                </section>
             <% } %>
         <% } else { %>
             <h1 class="text-xl">No Alumnis :(</h1>

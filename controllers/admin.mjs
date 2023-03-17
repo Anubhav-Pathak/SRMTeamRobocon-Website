@@ -1,6 +1,9 @@
 import Member from "../models/member.mjs";
 import Alumni from "../models/alumni.mjs";
 import Achievements from "../models/achievements.mjs";
+import Projects from "../models/projects.mjs";
+import Task from "../models/tasks.mjs";
+
 import bcrypt from "bcryptjs";
 import moment from "moment/moment.js";
 
@@ -126,6 +129,7 @@ export const postAddAlumni = (req, res, next) => {
     .then((member) => {
         const alumni  = new Alumni({
             memberId: {...member},
+            passoutYear: req.body.passoutYear,
             quote: req.body.quote,
             description: [req.body.about, req.body.experience]
         })
@@ -143,9 +147,15 @@ export const postAddAlumni = (req, res, next) => {
 export const getAlumni = (req, res, next) => {
     Alumni.find()
     .then(alumnis => {
+        let passoutYears = alumnis.map((alumni)=>alumni.passoutYear);
+        passoutYears = passoutYears.filter((value, index, array) => array.indexOf(value) === index);
+        const passouts = [];
+        passoutYears.forEach((passoutYear)=>{
+            passouts.push({[passoutYear]: alumnis.filter(alumni => alumni.passoutYear === passoutYear)})
+        });
         res.render("admin/alumni", {
             docTitle: `Admin | Alumni`,
-            alumnis: alumnis
+            alumnis: passouts,
         })
     })
     .catch(e => console.log(e));
@@ -182,12 +192,133 @@ export const getAchievements = (req, res, next) => {
 }
 
 export const getAddAchievements = (req, res, next) => {
-    res.render("admin/achievement", {
-        docTitle: "Admin | Achievements",
-        path: "/admin/achievements"
+    res.render("admin/add_achievement", {
+        docTitle: "Admin | Add Achievements",
+        path: "/admin/add-achievement",
+        editing: false,
     });
 }
 
-export const postAddAchievements = (req, res, next) => {
-    
+export const postAddAchievement = (req, res, next) => {
+    const achievement = new Achievements({
+        name: req.body.name,
+        description: req.body.description
+    })
+    achievement.save()
+    .then(()=>{
+        res.redirect('/admin/achievements');
+    })
+    .catch((e)=>console.log(e));
+}
+
+export const getEditAchievement = (req, res, next) => {
+    const editMode = req.query.edit;
+    if(!editMode) return res.redirect('/admin/achievements');
+    const achievementId = req.params.achievementId;
+    Achievements.findById(achievementId)
+    .then(achievement => {
+        if(!achievement) return res.redirect("/admin/achievements");
+        res.render("admin/add_achievement", {
+            docTitle: "Edit Achievement",
+            path: "/admin/edit-achievements",
+            editing: editMode,
+            achievement: achievement
+        });
+    })
+    .catch(e => console.log(e));
+}
+
+export const postEditAchievement = (req, res, next) => {
+    const achievementId = req.body.achievementId;
+    Achievements.findById(achievementId)
+    .then(achievement => {
+        if(achievement.id.toString() !== req.body.achievementId.toString()) return respond.redirect('/admin/achievements');
+        achievement.name = req.body.name;
+        achievement.description = req.body.description;
+        return achievement.save()
+    })
+    .then(() => res.redirect("/admin/achievements"))
+    .catch(e => console.log(e));
+}
+
+export const postDeleteAchievement = (req, res, next) => {
+    const achievementId = req.body.achievementId;
+    Achievements.findByIdAndDelete(achievementId)
+    .then(() => res.redirect("/admin/achievements"))
+    .catch(e => console.log(e));
+}
+
+export const getProjects = (req, res, next) => {
+    Projects.find()
+    .then((projects)=>{
+        res.render("admin/project", {
+            docTitle: "Admin | Projects",
+            path: "/admin/projects",
+            projects: projects
+        })
+    })
+}
+
+export const getAddProjects = (req, res, next) => {
+    res.render("admin/add_project", {
+        docTitle: "Admin | Add Projects",
+        path: "/admin/add-project",
+        editing: false,
+    });
+}
+
+export const postAddProject = (req, res, next) => {
+    const project = new Projects({
+        name: req.body.name,
+        description: req.body.description
+    })
+    project.save()
+    .then(()=>{
+        res.redirect('/admin/projects');
+    })
+    .catch((e)=>console.log(e));
+}
+
+export const getEditProject = (req, res, next) => {
+    const editMode = req.query.edit;
+    if(!editMode) return res.redirect('/admin/projects');
+    const projectId = req.params.projectId;
+    Projects.findById(projectId)
+    .then(project => {
+        if(!project) return res.redirect("/admin/projects");
+        res.render("admin/add_project", {
+            docTitle: "Edit Project",
+            path: "/admin/edit-project",
+            editing: editMode,
+            projects: project
+        });
+    })
+    .catch(e => console.log(e));
+}
+
+export const postEditProject = (req, res, next) => {
+    const projectId = req.body.projectId;
+    Projects.findById(projectId)
+    .then(project => {
+        if(project.id.toString() !== req.body.projectId.toString()) return respond.redirect('/admin/projects');
+        project.name = req.body.name;
+        project.description = req.body.description;
+        return project.save()
+    })
+    .then(() => res.redirect("/admin/projects"))
+    .catch(e => console.log(e));
+}
+
+export const postDeleteProject = (req, res, next) => {
+    const projectId = req.body.projectId;
+    Projects.findByIdAndDelete(projectId)
+    .then(() => res.redirect("/admin/projects"))
+    .catch(e => console.log(e));
+}
+
+export const getAddTasks = (req, res, next) => {
+    res.render("admin/add_tasks", {
+        docTitle: "Admin | Tasks",
+        path: "/admin/task"
+    });
 }

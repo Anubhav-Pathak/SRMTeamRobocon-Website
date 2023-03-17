@@ -1,6 +1,6 @@
 <%- include("../includes/header.ejs") %>
 
-<main class="px-2 py-12">
+<main class="min-h-screen px-2 pb-12 pt-24">
     <section class="mx-auto max-w-2xl flex flex-col gap-y-4 shadow-md rounded-md p-2">
         <img src="/images/people/Anubhav Pathak.jpg" width="200px" class="mx-auto"> 
         <h1 class="text-3xl font-bold"><%= alumni.memberId.name %></h1>
@@ -13,6 +13,8 @@
             <li><strong>Position: </strong><%= alumni.memberId.position %></li>
             <li><strong>Date of Birth: </strong><%= alumni.memberId.dob.toLocaleDateString() %></li>
             <li><strong>Date of Joining: </strong><%= alumni.memberId.doj.toLocaleDateString() %></li>
+            <li><strong>Passout Year: </strong><%= alumni.passoutYear %></li>
+        
         </ul>
         <fieldset class="border-2 border-black p-2">
             <legend class="font-bold text-xl">Personalia</legend>

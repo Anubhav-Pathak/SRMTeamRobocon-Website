@@ -1,9 +1,15 @@
 <%- include("../includes/header.ejs") %>
 
-<main class="min-h-[85vh] flex flex-col justify-center items-center px-2 py-12">
+<main class="min-h-screen flex flex-col justify-center items-center px-2 pb-12 pt-24">
 
     <form action="/admin/add-alumni" method="POST" class="flex flex-col gap-2 p-4 border-2 rounded-lg shadow-md">
         <h1 class="text-2xl font-bold mb-4"><%= member.name %></h1>
+
+        <div class="form-control">
+            <label for="passoutYear" class="block"> Passout Year: </label>
+            <input type="number" id="passoutYear" name="passoutYear"  placeholder="20XX" required class="outline-none w-full border-b-2">
+        </div>
+
         <div class="form-control">
             <label for="quote" class="block"> Quote: </label>
             <textarea id="quote" name="quote" class="outline-none w-full resize-none border-2 rounded-sm" rows="2"></textarea>
