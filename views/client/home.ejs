@@ -1,8 +1,15 @@
 <%- include("../includes/header.ejs") %>
-
-<main class="pt-[100px] bg-dark-blue">
+<head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    /> 
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  </head>
+  
+<main class="snap-y overflow-y-auto pt-[100px] bg-dark-blue">
     
-    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-100px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8 text-white text_orbitron">
+    <section class="snap-always snap-start mx-auto px-4 py-12 min-h-[calc(100vh-100px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8 text-white text_orbitron" >
         
         <article class="">
             <h1 class="text-4xl text_eurofighter">Lorem <span class="text-red-600">ipsum</span> dolor sit </h1>
@@ -30,49 +37,259 @@
             <button class="">Read More >></button>
         </div>
 
-    </section> -->
-
-    <section class="pb-28">
+    </section> --> 
+    <section class="snap-always snap-start pb-28">
         <div class="flex flex-col md:flex-row mt-0 mr-0 items-center md:mt-56 md:mr-24">
-            <div class="mt-20 md:mt-0 md:ml-28 relative">
-                <img src="images\image1.png" alt="" class="p-7 md:p-0 md:w-img relative z-10">
-                <img src="images\robo1.png" alt="" class="w-60 absolute -top-40 left-bot1 hidden md:block " id="bot-1">
-            </div>
-            <div class="w-5/6 md:w-1/2 text-white md:ml-32 md:text-left divide-y-4 divide-robo-red mt-16">
-                <h2 class="text-5xl font-semibold text_eurofighter">Our Mission</h2>
-                <p class="pt-7 mt-4 text-2xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
+            <div class="mt-20 animate__animated opacity-0 anim8 md:mt-0 md:ml-28 relative">
+                <img src="images\image1.png" alt="" class="p-7 rounded-2xl md:p-0 md:w-img relative z-10">
+                <!-- <img src="images\robo1.png" alt="" class="w-60 absolute -top-40 left-bot1 hidden md:block " id="bot-1"> -->
+            </div> 
+            <div class="w-11/12 md:w-2/3 text-white md:ml-32 md:text-left divide-y-4 divide-red-800 mt-16 shadow-inner shadow-slate-400 p-7 rounded-2xl items-center scale-100 focus:bg-white focus:text-dark-blue  animate__animated opacity-0 anim7 bg-gradient-to-r from-dark-blue to-red-800 hover:shadow-rose-600 duration-500">
+                <h2 class="text-4xl text-center font-semibold text_eurofighter"><span class="first:text-red-500">Our</span> Mission</h2>
+                <p class="pt-7 mt-4 text-xl text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
         </div>
         <div class="flex flex-col items-center md:flex-row mt-20 md:mt-56 md:ml-24">
-            <div class="md:mr-28 relative block md:hidden">
-                <img src="images\image2.png" alt="" class="md:w-img relative z-10 p-7 md:p-0">
-                <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2 hidden">
+            <div class="md:mr-28 opacity-0 anim7 animate__animated relative block md:hidden">
+                <img src="images\image2.png" alt="" class="md:w-img rounded-2xl relative z-10 p-7 md:p-0">
+                <!-- <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2"> -->
             </div>
-            <div class="w-5/6 md:w-1/2 text-white md:mr-32 md:text-right divide-y-4 divide-robo-red mt-16">
-                <h2 class="text-5xl font-semibold text_eurofighter">Our Vision</h2>
-                <p class="pt-7 mt-4 text-2xl ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
-            <div class="mr-28 relative flex invisible md:visible">
-                <img src="images\image2.png" alt="" class=" w-img relative z-10">
-                <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2 hidden md:block " id="bot-2">
+            <div class="w-11/12 md:w-2/3 text-white text-justify md:mr-32 md:text-right divide-y-4 divide-red-800 mt-16 shadow-inner shadow-slate-400 p-7 rounded-2xl items-center scale-100 animate__animated opacity-0 anim8 bg-gradient-to-r from-dark-blue to-red-800 hover:shadow-rose-600 duration-500">
+                <h2 class="text-4xl font-semibold text_eurofighter text-center"><span class="first:text-red-500">Our</span> Vision</h2>
+                <p class="pt-7 mt-4 text-xl text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
+            <div class="mr-28 opacity-0 anim7 animate__animated relative flex invisible md:visible">
+                <img src="images\image2.png" alt="" class="rounded-2xl w-img relative z-10">
+                <!-- <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2 hidden md:block " id="bot-2"> -->
             </div>
         </div>
     </section>
-    <section class="bg-black flex backdrop-blur-md flex-col md:flex-row items-center md:justify-around mt-20 pt-16 pb-12">
+    
+    
+    <div class="opacity-0 anim2 animate__animated invisible relative md:visible mb-5">    
+        <h2 class="text-4xl font-semibold text_eurofighter text-center text-white"><span class="first:text-red-500">Our</span> Proud Sponsors</h2>
+        </div>
+    <div class="opacity-0 anim2 animate__animated mb-5 md:hidden">
+        
+    <h2 class="text-2xl font-semibold text_eurofighter text-center mb-1 text-white"><span class="first:text-red-500">Our</span> Proud Sponsors</h2>
+
+    </div>
+
+
+<section class="flex items-center justify-center bg-dark-blue p-1 w-full">
+    
+        <div class="slide-container swiper max-w-6xl w-full py-10 px-0">
+            <div class="slide-content opacity-0 animate__animated animate__slower anim10 shadow-inner shadow-slate-400 overflow-hidden rounded-3xl mx-10 px-5 py-11 bg-gradient-to-r from-dark-blue to-red-800">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide bg-white rounded-3xl w-80">
+                        <div class="image-content flex flex-col py-5 px-0 items-center gap-y-1.5">
+                            <span class="overlay">
+                                <div class="card-image relative h-40 w-auto rounded-full bg-white p-1">
+                                    <img src="images\altium2.png" alt="" class="card-img h-full w-full object-cover ">
+                                </div>
+                            </span>
+                        </div> 
+                    </div>
+                    <div class="card swiper-slide bg-white rounded-3xl w-80">
+                        <div class="image-content flex flex-col py-5 px-0 items-center gap-y-1.5">
+                            <span class="overlay">
+                                <div class="card-image relative h-40 w-40 rounded-full bg-white p-1">
+                                    <img src="images\sp3.png" alt="" class="card-img h-full w-auto object-cover">
+                                </div>
+                            </span>
+                        </div> 
+                    </div> 
+                    <div class="card swiper-slide bg-white rounded-3xl w-80">
+                        <div class="image-content flex flex-col py-5 px-0 items-center gap-y-1.5">
+                            <span class="overlay">
+                                <div class="card-image relative h-40 w-40 rounded-full bg-white p-1">
+                                    <img src="images\sp2.png" alt="" class="card-img h-full w-full object-cover rounded-full">
+                                </div>
+                            </span>
+                        </div> 
+                    </div>
+                    <div class="card swiper-slide bg-white rounded-3xl w-80">
+                        <div class="image-content flex flex-col py-5 px-0 items-center gap-y-1.5">
+                            <span class="overlay">
+                                <div class="card-image relative h-40 w-40 rounded-full bg-white p-1">
+                                    <img src="images\matlab.png" alt="" class="card-img h-full w-full object-cover rounded-full">
+                                </div>
+                            </span>
+                        </div> 
+                    </div>
+                    <div class="card swiper-slide bg-white rounded-3xl w-80">
+                        <div class="image-content flex flex-col py-5 px-0 items-center gap-y-1.5">
+                            <span class="overlay">
+                                <div class="card-image relative h-40 w-auto rounded-full bg-white p-1">
+                                    <img src="images\sp55.png" alt="" class="card-img h-40 w-auto object-cover">
+                                </div>
+                            </span>
+                        </div> 
+                    </div>
+                    <div class="card swiper-slide bg-white rounded-3xl w-80">
+                        <div class="image-content flex flex-col py-5 px-0 items-center gap-y-1.5">
+                            <span class="overlay">
+                                <div class="card-image relative h-40 w-40 rounded-full bg-white p-1">
+                                    <img src="images\sp7.png" alt="" class="card-img h-full w-auto object-cover">
+                                </div>
+                            </span>
+                        </div> 
+                    </div>
+                    <!--<div class="card swiper-slide bg-white rounded-3xl w-80">
+                        <div class="image-content flex flex-col py-5 px-0 items-center gap-y-1.5">
+                            <span class="overlay">
+                                <div class="card-image relative h-40 w-40 rounded-full bg-white p-1">
+                                    <img src="images\image2.png" alt="" class="card-img h-full w-full object-cover rounded-full">
+                                </div>
+                            </span>
+                        </div>
+                         <div class="card-content flex flex-col items-center">
+                            <h2 class="name text-lg font-medium text-red-600">Sponsor - 8</h2>
+                            <p class="description text-xs text-dark-blue text-center">Lorem Ipsum is simply dummy text.</p>
+                        </div> 
+                    </div>-->
+                </div>
+            </div>
+            
+      <div class="swiper-button-next opacity-0 animate__animated anim8"></div>
+      <div class="swiper-button-prev opacity-0 animate__animated anim7"></div>
+      <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
+
+    <section class="snap-always snap-start bg-black flex backdrop-blur-md flex-col md:flex-row items-center md:justify-around mt-20 pt-16 pb-12">
         <img src="images\robocon-logo.gif" alt="" class="w-72">
         <div>
-            <h1 class="text-2xl md:text-4xl font-bold text-white">SRM TEAM ROBOCON</h1>
-            <p class="text-white font-semibold text-xl p-3">Robotics Reimagined</p>
+            <h1 class="text-2xl md:text-4xl font-bold text-center text-white">SRM TEAM ROBOCON</h1>
+            <p class="text-white font-semibold text-xl text-center p-3">Robotics Reimagined</p>
             <div class="flex flex-row justify-around mt-5">
-                <img src="images\logos\fb.svg" alt="" class="w-12">
-                <img src="images\logos\inst.svg" alt="" class="w-11">
-                <img src="images\logos\lin.svg" alt="" class="w-12">
-                <img src="images\logos\yo.svg" alt="" class="w-12">
+                <img src="images\logos\fb.svg" alt="" class="w-12 animate__animated animate__delay-1s anim6">
+                <img src="images\logos\inst.svg" alt="" class="w-11 animate__animated animate__delay-1s anim6">
+                <img src="images\logos\lin.svg" alt="" class="w-12 animate__animated animate__delay-1s anim6">
+                <img src="images\logos\yo.svg" alt="" class="w-12 animate__animated animate__delay-1s anim6">
             </div>
-            <p class="text-white text-xl pt-10">5th Floor, Basic Engineering Lab, SRMIST, </p>
-            <p class="text-white text-xl">Kattankulathur, Chennai (603203)</p>
+            <p class="text-white text-xl pt-10 text-center">5th Floor, Basic Engineering Lab, SRMIST, </p>
+            <p class="text-white text-xl text-center">Kattankulathur, Chennai (603203)</p>
 
         </div>
         <img src="images\collegelogo.png" alt="" class="w-72">
-    </section>
-</main>
+    </section>  
 
+    
+
+
+</main> 
+
+<script>
+    // const images = document.querySelector('.anim'); 
+    // observer = new IntersectionObserver((entries)=>{ 
+    //     entries.forEach(entry => {
+    //        entry.target.classList.toggle("animate__fadeInTopLeft", entry.isIntersecting)
+    //        entry.target.classList.toggle("opacity-1", entry.isIntersecting) 
+    //     }),{threshold: 1}
+    // })
+    // observer.observe(images)
+    
+    const images = document.querySelectorAll('.anim'); 
+    observer = new IntersectionObserver((entries)=>{ 
+        entries.forEach(entry => {
+           entry.target.classList.toggle("animate__fadeInLeft", entry.isIntersecting) 
+           entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+        }),{threshold: 0.5} 
+    })
+    images.forEach(imaged=>{
+        observer.observe(imaged)
+    })
+ 
+    const images2 = document.querySelectorAll('.anim2'); 
+    observer2 = new IntersectionObserver((entries2)=>{ 
+        entries2.forEach(entry => {
+           entry.target.classList.toggle("animate__fadeInDown", entry.isIntersecting) 
+           entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+        }),{threshold: 0.5} 
+    })
+    images2.forEach(imaged=>{
+        observer2.observe(imaged)
+    })
+
+    // const images3 = document.querySelectorAll('.anim3'); 
+    // observer3 = new IntersectionObserver((entries3)=>{ 
+    //     entries3.forEach(entry => {
+    //        entry.target.classList.toggle("animate__bounceIn", entry.isIntersecting) 
+    //     }),{threshold: 0.5} 
+    // })
+    // images3.forEach(imaged=>{
+    //     observer3.observe(imaged)
+    // })
+
+
+
+
+    const images4 = document.querySelector('.anim4'); 
+    observer4 = new IntersectionObserver((entries4)=>{ 
+        entries4.forEach(entry => {
+           entry.target.classList.toggle("animate__fadeInRight", entry.isIntersecting) 
+           entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+        }),{threshold: 1} 
+    })
+    observer4.observe(images4)
+
+    const images7 = document.querySelectorAll('.anim7'); 
+    observer7 = new IntersectionObserver((entries7)=>{ 
+        entries7.forEach(entry => {
+           entry.target.classList.toggle("animate__fadeInLeft", entry.isIntersecting) 
+           entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+        }),{threshold: 1} 
+    })
+    images7.forEach(imaged=>{
+        observer7.observe(imaged)
+    })
+
+    const images6 = document.querySelectorAll('.anim6'); 
+    observer6 = new IntersectionObserver((entries6)=>{ 
+        entries6.forEach(entry => {
+           entry.target.classList.toggle("animate__rubberBand", entry.isIntersecting) 
+           entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+        }),{threshold: 1} 
+    })
+    images6.forEach(imagea=>{
+        observer6.observe(imagea)
+    })
+
+    const images8 = document.querySelectorAll('.anim8'); 
+    observer8 = new IntersectionObserver((entries8)=>{ 
+        entries8.forEach(entry => {
+           entry.target.classList.toggle("animate__fadeInRight", entry.isIntersecting) 
+           entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+        }),{threshold: 1} 
+    })
+    images8.forEach(imaged=>{
+        observer8.observe(imaged)
+    })
+
+    // const images9 = document.querySelectorAll('.anim9'); 
+    // observer9 = new IntersectionObserver((entries9)=>{ 
+    //     entries9.forEach(entry => {
+    //        entry.target.classList.toggle("animate__headShake", entry.isIntersecting) 
+    //        entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+    //     }),{threshold: 1} 
+    // })
+    // images9.forEach(imaged=>{
+    //     observer9.observe(imaged)
+    // })
+
+    const images10 = document.querySelectorAll('.anim10'); 
+    observer10 = new IntersectionObserver((entries10)=>{ 
+        entries10.forEach(entry => {
+           entry.target.classList.toggle("animate__fadeIn", entry.isIntersecting) 
+           entry.target.classList.toggle("opacity-1", entry.isIntersecting)
+        }),{threshold: 0.5} 
+    })
+    images10.forEach(imaged=>{
+        observer10.observe(imaged)
+    })
+</script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 <%- include("../includes/footer.ejs") %>
