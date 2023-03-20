@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
     
     <link rel="stylesheet" href="/css/input.css">
     <link rel="stylesheet" href="/css/output.css">
-
+ 
     <script defer src="/js/header.js"></script>
     <script defer src="/js/client.js"></script>
     <script defer src="/js/home.js"></script>
@@ -27,7 +27,7 @@
         <% if(isAuthenticated) { %> 
             <p><%= admin.name %></p>
         <% } else { %>
-            <img width="150px" src="images\Logo.png" alt="Logo">
+            <a href="#home"><img width="150px" src="images\Logo.png" alt="Logo"></a>
         <% } %>
 
         <ul id="menu" class="md:flex gap-x-4 -translate-y-[100vh] md:-translate-y-0 text_orbitron">
