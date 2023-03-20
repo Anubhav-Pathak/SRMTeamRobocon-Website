@@ -1,14 +1,20 @@
     </main>
     
-    <footer class="flex justify-between px-4 py-12 bg-footer font-secondary">
-        <div class="flex items-center">
+    <footer class="flex flex-wrap gap-8 items-center sm:justify-between px-4 py-12 bg-footer font-secondary">
+        <div class="text-secondary">
+            <ul class="flex gap-x-4 mb-4">
+                <li><i class="fa-2xl fa-brands fa-square-facebook"></i></li>
+                <li><i class="fa-2xl fa-brands fa-square-instagram"></i></li>
+                <li><i class="fa-2xl fa-brands fa-linkedin"></i></li>
+                <li><i class="fa-2xl fa-brands fa-youtube"></i></li>
+            </ul>
             <% if(!isAuthenticated) { %>
-                <a href="/login"><button class="px-2 py-2 border-2 border-white">Login as member</button></a>
+                <a href="/login"><button class="px-2 py-2 clip-1 bg-glass backdrop-blur-lg">Login as member</button></a>
             <% } else { %>
-                <a href="/logout"><button class="px-2 py-2 border-2 border-white">Logout</button></a>
+                <a href="/logout"><button class="px-2 py-2 clip-1 bg-glass backdrop-blur-lg">Logout</button></a>
             <% } %>
         </div>
-        <div class="self-end flex items-start justify-start gap-x-16 text-secondary">
+        <div class="flex flex-wrap-reverse justify-start gap-x-16 gap-y-4 text-secondary">
             <ul class="text-sm">
                 <li class="text-xl mb-2">Quick Links</li>
                 <li>Home</li>
@@ -23,7 +29,6 @@
                 <li>Blogs</li>
             </ul>
             <img src="images/Logo.svg">
-
         </div>
     </footer>
     
