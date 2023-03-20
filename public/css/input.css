@@ -65,10 +65,6 @@ ul.active a:hover{
     display: block;
 }
 
-
-
-
-
 .menu {
     background-color: transparent;
     border: none;
@@ -110,97 +106,12 @@ ul.active a:hover{
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
-  
 
-  /* HOME CSS  START*/
-
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
-
-  .orbitron_font {
-    font-family: 'Orbitron', sans-serif;
-  }
-
-  @font-face {
-    font-family: "euroFighter";
-    src: url("../fonts/eurofighter.ttf");
-  }
-
-  .text_eurofighter{
-    font-family: euroFighter;
-  }
-
-  @font-face {
-    font-family: "orbitron";
-    src: url("../fonts/Orbitron-Bold.ttf");
-  }
-
-  .text_orbitron{
-    font-family: orbitron;
-  }
-
-  @font-face {
-    font-family: "raleway300";
-    src: url("../fonts/raleway300.ttf");
-  }
-
-  .text_raleway300{
-    font-family: raleway300;
-    font-weight: 500;
-  }
-
-  .abu_image {
-    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
-    border-radius: 10px;
-  }
-
-  #abu_section{
-    background-image: url(../images/ABU_Robocon.png);
-    background-size: cover;
-
-    min-height: 100vh;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .abu_box{
-    border-radius: 50px;
-  }
-
-  #design1 {
-    width: 100vw;
-  }
-
-  /* bot animations */
-
-@keyframes jump1 {
-  0% {
-    top: 0rem; left: 25rem
-  }75% {
-    top: -11rem; left: 31.5rem
-  }100% {
-    top: -10rem; left: 31rem
-  }
+@font-face {
+  font-family: "eurofighter";
+  src: url("../fonts/EuroFighterLaser.ttf");
 }
-
-.jumping_bot1{
-  animation: jump1 .7s ease-in ;
+@font-face {
+  font-family: "exo";
+  src: url("../fonts/ExoExtraLight.ttf");
 }
-
-@keyframes jump2 {
-  0% {
-    top: 0rem;
-  }75% {
-    top: -14rem;
-  }100% {
-    top: -12rem;
-  }
-}
-
-.jumping_bot2{
-  animation: jump2 .7s ease-in ;
-}
-
-  /* HOME CSS STOP */
