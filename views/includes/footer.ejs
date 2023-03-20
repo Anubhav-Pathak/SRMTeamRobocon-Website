@@ -1,13 +1,31 @@
-
-    <footer class="text-lg text-center p-4 bg-black text-white">
+    </main>
+    
+    <footer class="flex justify-between px-4 py-12 bg-footer font-secondary">
         <div class="flex items-center">
             <% if(!isAuthenticated) { %>
-                <a href="/login"><button class="px-2 py-2 border-2 border-white">Login</button></a>
+                <a href="/login"><button class="px-2 py-2 border-2 border-white">Login as member</button></a>
             <% } else { %>
                 <a href="/logout"><button class="px-2 py-2 border-2 border-white">Logout</button></a>
             <% } %>
         </div>
-        <p class="">Created with <span class="text-red-500">&hearts;</span> by your Team Robocon</p>
+        <div class="self-end flex items-start justify-start gap-x-16 text-secondary">
+            <ul class="text-sm">
+                <li class="text-xl mb-2">Quick Links</li>
+                <li>Home</li>
+                <li>Projects</li>
+                <li>Achievements</li>
+            </ul>
+            <ul class="text-sm">
+                <li class="text-xl mb-2">About Us</li>
+                <li>Team</li>
+                <li>Gallery</li>
+                <li>Alumni</li>
+                <li>Blogs</li>
+            </ul>
+            <img src="images/Logo.svg">
+
+        </div>
     </footer>
+    
 </body>
 </html>

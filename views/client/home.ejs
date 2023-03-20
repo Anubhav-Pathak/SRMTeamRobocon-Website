@@ -1,26 +1,38 @@
-<%- include("../includes/header.ejs") %>  
-  
-<main class="snap-y overflow-y-auto pt-[100px] bg-dark-blue">
-    
-    <section class="snap-always snap-start mx-auto px-4 py-12 min-h-[calc(100vh-100px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8 text-white text_orbitron" >
-        
+<%- include("../includes/header.ejs") %>   
+
+    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-75px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8" >
         <article class="">
-            <h1 class="text-4xl text_eurofighter">Lorem <span class="text-red-600">ipsum</span> dolor sit </h1>
-            <p class="mt-4 text-xl text text_raleway300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vel! Culpa recusandae harum voluptates id? Suscipit recusandae laboriosam nobis eligendi!</p>
-            <button class="mt-8 bg-red-600 shadow-white shadow-sm px-4 py-2 md:px-8 md:py-4 rounded font-bold hover:bg-red-700"><a href="#">View More</a></button>
+            <h1 class="text-4xl font-primary text-secondary">Lorem <span class="text-quaternary">ipsum</span> dolor sit </h1>
+            <p class="mt-4 text-lg text-secondary font-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vel! Culpa recusandae harum voluptates id? Suscipit recusandae laboriosam nobis eligendi!</p>
+            <button class="mt-8 bg-glass px-4 py-2 md:px-8 md:py-4 font-primary text-secondary clip-1"><a href="#">View More</a></button>
         </article>
         
         <img class="w-96" src="images/bot-1.png" alt="Robot" loading="lazy">
-        
-        <div class="col-span-full mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-center text-md md:text-2xl">
-            <div class=""><span id="members_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Members</caption></div>
-            <div class=""><span id="participations_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Participations</caption></div>
-            <div class=""><span id="robots_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Robots</caption></div>
-            <div class=""><span id="alumini_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Alumnis</caption></div>
-        </div>
-
     </section>
 
-</main> 
+    <section class="flex flex-col gap-16 max-w-7xl mx-auto">
+        <article class="self-end xl:ml-[648px] bg-glass pt-2 pb-16 pl-16 pr-2 text-right clip-2 max-w-2xl">
+            <h1 class="text-4xl font-primary text-secondary">Our <span class="text-quaternary">Mission</span></h1>
+            <p class="mt-4 text-lg font-secondary text-secondary">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+        </article>
+        <article class="bg-inverted-glass pb-2 pt-16 pr-16 pl-2 text-left clip-3 max-w-2xl">
+            <h1 class="text-4xl font-primary text-secondary">Our <span class="text-quaternary">Vision</span></h1>
+            <p class="mt-4 text-lg font-secondary text-secondary">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+        </article>
+    </section>
+
+    <section class="py-36">
+        <h1 class="text-center text-4xl text-secondary font-primary mb-16">Partners & <span class="text-tertiary">Sponsors</span></h1>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 1.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 2.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 3.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 4.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 5.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 6.png" alt="Sponsor" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
 
 <%- include("../includes/footer.ejs") %>
