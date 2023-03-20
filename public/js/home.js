@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
         let upto = 0;
 
         function updated() {
-            element.innerHTML = ++upto + "+";
+            element.innerHTML = ++upto + "<span class=\"text-red-600\">+</span>";
             if (upto === x) {
                 clearInterval(counts);
             }
@@ -67,10 +67,10 @@ window.addEventListener('load', function () {
         myObserver.observe(element)
     }
 
-    count_intersection_animation(members_count, 65,10)
-    count_intersection_animation(participations_count, 6,200)
-    count_intersection_animation(robots_count, 11,100)
-    count_intersection_animation(alumini_count, 100,10)
+    count_intersection_animation(members_count, 65,1/65*1000)
+    count_intersection_animation(participations_count, 6,1/6*1000)
+    count_intersection_animation(robots_count, 11,1/11*1000)
+    count_intersection_animation(alumini_count, 100,1/100*1000)
 
 
     // Robo character intersection observer animations
@@ -78,7 +78,7 @@ window.addEventListener('load', function () {
     const robo1_callback = (entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                robo1.classList.add("animate-jumping-bot1")
+                robo1.classList.add("jumping_bot1")
             }
         })
     }
@@ -95,7 +95,7 @@ window.addEventListener('load', function () {
     const robo2_callback = (entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                robo2.classList.add("animate-jumping-bot2")
+                robo2.classList.add("jumping_bot2")
             }
         })
     }

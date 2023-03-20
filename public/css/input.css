@@ -138,6 +138,16 @@ ul.active a:hover{
     font-family: orbitron;
   }
 
+  @font-face {
+    font-family: "raleway300";
+    src: url("../fonts/raleway300.ttf");
+  }
+
+  .text_raleway300{
+    font-family: raleway300;
+    font-weight: 500;
+  }
+
   .abu_image {
     box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
     border-radius: 10px;
@@ -162,5 +172,35 @@ ul.active a:hover{
   #design1 {
     width: 100vw;
   }
+
+  /* bot animations */
+
+@keyframes jump1 {
+  0% {
+    top: 0rem; left: 25rem
+  }75% {
+    top: -11rem; left: 31.5rem
+  }100% {
+    top: -10rem; left: 31rem
+  }
+}
+
+.jumping_bot1{
+  animation: jump1 .7s ease-in ;
+}
+
+@keyframes jump2 {
+  0% {
+    top: 0rem;
+  }75% {
+    top: -14rem;
+  }100% {
+    top: -12rem;
+  }
+}
+
+.jumping_bot2{
+  animation: jump2 .7s ease-in ;
+}
 
   /* HOME CSS STOP */
