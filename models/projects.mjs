@@ -1,6 +1,6 @@
 import mongoose, { Schema, SchemaType } from "mongoose";
 
-const achievementSchema = mongoose.Schema({
+const projectSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -11,6 +11,6 @@ const achievementSchema = mongoose.Schema({
     }
 });
 
-const Achievement = mongoose.model("achievement", achievementSchema)
+const Project = mongoose.model("project", projectSchema)
 
-export default Achievement;
+export default Project;

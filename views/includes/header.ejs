@@ -32,18 +32,22 @@
 
         <ul id="menu" class="md:flex gap-x-4 -translate-y-[100vh] md:-translate-y-0 text_orbitron">
             <% if(!isAuthenticated) { %>
-                <li><a class="hover:text-robo-red animate__animated anim7" href="/">Home</a></li>
-                <li><a class="hover:text-robo-red animate__animated anim7" href="/team">Our Team</a></li>
-                <li><a class="hover:text-robo-red animate__animated animate__delay-1s anim7" href="/achievements">Achievements</a></li>
-                <li><a class="hover:text-robo-red animate__animated animate__delay-1s anim7" href="/alumni">Alumni</a></li>
+                <li><a class="hover:text-robo-red" href="/">Home</a></li>
+                <li><a class="hover:text-robo-red" href="/team">Our Team</a></li>
+                <li><a class="hover:text-robo-red" href="/gallery">Gallery</a></li>
+                <li><a class="hover:text-robo-red" href="/projects">Projects</a></li>
+                <li><a class="hover:text-robo-red" href="/achievements">Achievements</a></li>
+                <li><a class="hover:text-robo-red" href="/blogs">Blogs</a></li>
+                <li><a class="hover:text-robo-red" href="/alumni">Alumni</a></li>
             <% } else { %>
                 <li><a href="/admin/">Panel</a></li>
                 <li><a href="/admin/task">Tasks</a></li>
                 <% switch (admin.position) {
                     case 'Team lead' : %>
-                        <li><a href="/admin/achievements">Achievements</a></li>
                         <li><a href="/admin/team">Members</a></li>
                         <li><a href="/admin/alumni">Alumni</a></li>
+                        <li><a href="/admin/projects">Projects</a></li>
+                        <li><a href="/admin/achievements">Achievements</a></li>
                         <% break;               
                     case 'Lead' : %>
                         <li><a href="/admin/team">Members</a></li>
@@ -51,15 +55,19 @@
                 } %>
             <% } %>
         </ul>
-
-        <button id="navbar-toggler" class="md:hidden" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-            <svg width="50" height="50" viewBox="0 0 100 100">
-              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-              <path class="line line2" d="M 20,50 H 80" />
-              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-            </svg>
-        </button>
-
+        <div class="flex items-center">
+            <% if(!isAuthenticated) { %>
+                <a href="/login"><button class="px-2 py-2 border-2 border-white">Login</button></a>
+            <% } else { %>
+                <a href="/logout"><button class="px-2 py-2 border-2 border-white">Logout</button></a>
+            <% } %>
+            <button id="navbar-toggler" class="md:hidden" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
         </div>
     </nav>
     

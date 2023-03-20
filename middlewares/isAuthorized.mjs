@@ -7,7 +7,4 @@ const isAuthorized = (request, respond, next) => {
     next();
 }
 
-const isBoard = (req, res, next) => {
-}
-
 export default isAuthorized;
