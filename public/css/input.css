@@ -138,6 +138,16 @@ ul.active a:hover{
     font-family: orbitron;
   }
 
+  @font-face {
+    font-family: "raleway300";
+    src: url("../fonts/raleway300.ttf");
+  }
+
+  .text_raleway300{
+    font-family: raleway300;
+    font-weight: 500;
+  }
+
   .abu_image {
     box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
     border-radius: 10px;
