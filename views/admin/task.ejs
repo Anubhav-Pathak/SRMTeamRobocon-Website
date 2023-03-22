@@ -1,0 +1,19 @@
+<%- include("../includes/header.ejs") %>
+
+    <section class="min-h-[calc(100vh-150px)] flex flex-col justify-center p-2">
+        <% if(tasks.length > 0) { %>
+            <% for(task of tasks) { %>
+                <article class="block border-2">
+                    <h1>Task: <%= task._id.toString().slice(-8).toUpperCase() %></h1>
+                    <ul>
+                        <li class="font-bold">Assignee - <%= task.assignee.name %></li>
+                        <ul></ul>
+                    </ul>
+                </article>
+            <% } %>
+        <% } else { %>
+            <h1 class="text-xl text-center">No Tasks :)</h1>
+        <% } %>
+    </section>
+
+<%- include("../includes/footer.ejs") %>

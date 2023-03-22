@@ -4,7 +4,7 @@ import {getTeam, getAddMember, postAddMember, getEditMember, postEditMember, pos
 import {getAlumni, getAddAlumni, postAddAlumni, postDeleteAlumni, getDetailsAlumni} from "../controllers/Admin/Alumni.mjs"
 import {getAchievements, getAddAchievements, postAddAchievement, getEditAchievement, postEditAchievement, postDeleteAchievement} from "../controllers/Admin/Achievement.mjs"
 import {getProjects, getAddProjects, postAddProject, getEditProject, postEditProject, postDeleteProject} from "../controllers/Admin/Project.mjs";
-import {getAddTasks} from "../controllers/Admin/Task.mjs";
+import {getAddTask, getTask, postAddTask} from "../controllers/Admin/Task.mjs";
 import isAuthorized from "../middlewares/isAuthorized.mjs"
 
 const router = express.Router();
@@ -38,6 +38,8 @@ router.get("/edit-project/:projectId", isAuthorized, getEditProject);
 router.post("/edit-project", isAuthorized, postEditProject);
 router.post("/delete-project", isAuthorized, postDeleteProject);
 
-router.get("/add-task", isAuthorized, getAddTasks);
+router.get("/task", isAuthorized, getTask);
+router.get("/add-task", isAuthorized, getAddTask);
+router.post("/add-task", isAuthorized, postAddTask );
 
 export default router;

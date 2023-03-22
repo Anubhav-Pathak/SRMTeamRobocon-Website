@@ -1,10 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 const taskSchema = mongoose.Schema({
-    serialNo: {
-        type: Number,
-        required: true,
-    },
+    assignedOn: Date,
     description: Schema.Types.String,
     assignee: {
         type: Schema.Types.ObjectId,
