@@ -1,0 +1,91 @@
+<%- include("../includes/header.ejs") %>
+
+<main class="min-h-screen flex flex-col justify-center items-center px-2 pb-12 pt-24">
+
+    <form action="/admin/<% if(editing) { %>edit-member?edit=true<% } else { %>add<% } %>" method="POST" class="flex flex-col gap-2 p-4 border-2 rounded-lg shadow-md">
+        
+        <div class="form-control border-b-2">
+            <label for="name" class="block"> Name: </label>
+            <input type="text" id="name" name="name"  value="<% if(editing) { %><%=member.name%><% } else { %><% } %>" placeholder="John Doe" required class="outline-none w-full">
+        </div>
+        <div class="border-b-2">
+            <label for="register-number" class="block"> Register no: </label>
+            <input type="text" id="register-number" name="registerNo" value="<% if(editing) { %><%=member.registerNo%><% } else { %><% } %>" placeholder="RAXXXXXXXXXXXXX" required class="outline-none w-full">
+        </div>
+        <div class="border-b-2">
+            <label for="email" class="block"> Email: </label>
+            <input type="text" id="email" name="email" value="<% if(editing) { %><%=member.email%><% } else { %><% } %>" placeholder="xyz@srmist.edu.in" required class="outline-none w-full">
+        </div>
+        <div class="form-control border-b-2">
+            <label for="password" class="block"> Password: </label>
+            <input type="password" id="password" name="password" value="" placeholder="John Doe" required class="outline-none w-full">
+        </div>
+        <div class="border-b-2">
+            <label for="linkedin" class="block"> LinkedIn: </label>
+            <input type="text" id="linkedin" name="linkedin" value="<% if(editing) { %><%=member.linkedIn%><% } else { %><% } %>" class="outline-none w-full">
+        </div>
+        <div class="border-b-2">
+            <label for="instagram" class="block"> Instagram: </label>
+            <input type="text" id="instagram" name="instagram" value="<% if(editing) { %><%=member.instagram%><% } else { %><% } %>" class="outline-none w-full">
+        </div>
+        <div class="border-b-2">
+            <label for="phone" class="block"> Phone no: </label>
+            <input type="number" id="phone" name="phone" value="<% if(editing) { %><%=member.phone%><% } else { %><% } %>" placeholder="XXX XXX XXXX" class="outline-none w-full">
+        </div>
+        <div class="border-b-2">
+            <label for="dob" class="block"> Date of Birth: </label>
+            <input type="date" id="dob" name="dob" value="<% if(editing) { %><%=dob%><% } else { %><% } %>" class="outline-none w-full" required>
+        </div>
+        <div class="border-b-2">
+            <label for="doj" class="block"> Date of Joining: </label>
+            <input type="date" id="doj" name="doj" value="<% if(editing) { %><%=doj%><% } else { %><% } %>" class="outline-none w-full" required>
+        </div>
+        <div class="">
+            <label class="block"> Domain: </label>
+            <div class="flex flex-wrap gap-2 ml-4">
+                <div>
+                    <input type="radio" id="sambed" name="domain" value="sambed" <% if(member.domain === "sambed"){ %><%= "checked" %> <% } %>>
+                    <label for="sambed"> SAMBED </label>
+                </div>
+                <div>
+                    <input type="radio" id="siased" name="domain" value="siased" <% if(member.domain === "siased"){ %><%= "checked" %> <% } %>>
+                    <label for="siased"> SIASED </label>
+                </div>
+                <div>
+                    <input type="radio" id="spaced" name="domain" value="spaced" <% if(member.domain === "spaced"){ %><%= "checked" %> <% } %>>
+                    <label for="spaced"> SPACED </label>
+                </div>
+                <div>
+                    <input type="radio" id="mcsocd" name="domain" value="mcsocd" <% if(member.domain === "mcsocd"){ %><%= "checked" %> <% } %>>
+                    <label for="mcsocd"> MCSOCD </label>
+                </div>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block"> Position: </label>
+            <div class="flex flex-col gap-2 ml-4">
+                <div>
+                    <input type="radio" id="member" name="position" value="Member" <% if(member.position === "Member"){ %><%= "checked" %> <% } %>>
+                    <label for="member"> Member </label>
+                </div>
+                <div>
+                    <input type="radio" id="domain-lead" name="position" value="Lead" <% if(member.position === "Lead"){ %><%= "checked" %> <% } %>>
+                    <label for="domain-lead"> Lead </label>
+                </div>
+                <div>
+                    <input type="radio" id="team-lead" name="position" value="Team lead" <% if(member.position === "Team lead"){ %><%= "checked" %> <% } %>>
+                    <label for="team-lead"> Team Lead </label>
+                </div>
+            </div>
+        </div>
+
+        <% if (editing) { %>
+            <input type="hidden" value="<%= member.id %>" name="memberId">
+        <% } %>
+
+        <input type="submit" value="<% if(editing) { %>Update Member<% } else { %>Add Member<% } %>" class="bg-black text-white rounded-sm p-2 cursor-pointer">
+    
+    </form>
+</main>
+
+<%- include("../includes/footer.ejs") %>

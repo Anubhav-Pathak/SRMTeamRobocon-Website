@@ -1,12 +1,18 @@
 import Member from "../models/member.mjs";
 import Alumni from "../models/alumni.mjs";
 import Achievements from "../models/achievements.mjs";
+import Projects from "../models/projects.mjs";
 
 export const getHome = (req, res, next) => {
-    res.render("client/home", {
-        docTitle: "SRMTeamRobocon",
-        path: "/"
-    });
+    Projects.find()
+    .then((projects) => {
+        res.render("client/home", {
+            docTitle: "SRMTeamRobocon",
+            path: "/",
+            projects: projects
+        });
+    })
+    .catch(e => console.log(e));
 }
 
 export const getTeam = (req, res, next) => {
@@ -38,13 +44,19 @@ export const getTeam = (req, res, next) => {
 
 export const getAlumni = (req, res, next) => {
     Alumni.find()
-    .then((alumnis)=>{
+    .then(alumnis => {
+        let passoutYears = alumnis.map((alumni)=>alumni.passoutYear);
+        passoutYears = passoutYears.filter((value, index, array) => array.indexOf(value) === index);
+        const passouts = [];
+        passoutYears.forEach((passoutYear)=>{
+            passouts.push({[passoutYear]: alumnis.filter(alumni => alumni.passoutYear === passoutYear)})
+        });
         res.render("client/alumni", {
-            docTitle: "Our Alumnis",
-            path: "/alumnis",
-            alumnis: alumnis
+            docTitle: `Admin | Alumni`,
+            alumnis: passouts,
         })
     })
+    .catch(e => console.log(e));
 }
 
 export const getAchievements = (req, res, next) => {
@@ -56,4 +68,5 @@ export const getAchievements = (req, res, next) => {
             achievements: achievements
         })
     })
+    .catch(e => console.log(e));
 }

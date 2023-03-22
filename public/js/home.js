@@ -27,3 +27,23 @@ const swiper = new Swiper('.swiper', {
       }
     }
 });
+
+const swiperSponsor = new Swiper('.swiper-project', {
+  loop: true,
+  autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+  }
+});

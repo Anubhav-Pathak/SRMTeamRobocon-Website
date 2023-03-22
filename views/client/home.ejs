@@ -7,7 +7,24 @@
             <button class="mt-8 bg-glass px-4 py-2 md:px-8 md:py-4 font-primary text-secondary clip-1"><a href="#">View More</a></button>
         </article>
         
-        <img class="w-96" src="images/bot-1.png" alt="Robot" loading="lazy">
+        <img class="w-96" src="images/Embelem.gif" alt="Robot" loading="lazy">
+    </section>
+
+    <section class="py-36">
+        <h1 class="text-center text-4xl text-secondary font-primary mb-16">Projects <span class="text-tertiary">Done</span></h1>
+        <div class="swiper-project">
+            <div class="swiper-wrapper">
+                <% for(project of projects) { %>
+                    <div class="swiper-slide">
+                        <article class="h-[200px]">
+                            <img src="images/<%=project.name.png%>" alt="<%= project.name %>">
+                            <h1><%= project.name %></h1>
+                            <p><%= project.description %></p>
+                        </article>
+                    </div>
+                <% } %>
+            </div>
+        </div>
     </section>
 
     <section class="flex flex-col gap-16 max-w-7xl mx-auto">

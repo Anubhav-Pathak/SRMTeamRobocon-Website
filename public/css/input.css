@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  font-family: exo;
+  color: white;
+}
+
 ul.active{
   position: fixed;
   top: 91px;
@@ -98,6 +103,15 @@ ul.active a:hover{
 .clip-3{
   clip-path: polygon(0 0, 91% 9%, 100% 100%, 0 100%);
   border: 1px solid #878787;
+}
+
+form{
+  font-family: exo;
+  color: white;
+}
+
+form input, textarea{
+  color: black;
 }
 
 .swiper {

@@ -27,7 +27,7 @@ export const getTeam = (req, res, next) => {
 }
 
 export const getAddMember = (req, res, next) => {
-    res.render("admin/add_edit", {
+    res.render("admin/add_member", {
         docTitle: "Admin | Add Member",
         path: "admin/add",
         editing: false
@@ -35,7 +35,7 @@ export const getAddMember = (req, res, next) => {
 }
 
 export const postAddMember = (req, res, next) => {
-    const password = req.body.email.split('@')[0]+req.body.dob.split("-")[0]
+    const password = req.body.password;
     bcrypt.hash(password, 12)
     .then(hashedPassword => {
         const newMember = new Member({
@@ -66,7 +66,7 @@ export const getEditMember = (req, res, next) => {
     Member.findById(memberId)
     .then(member => {
         if(!member) return res.redirect("/admin/team");
-        res.render("admin/add_edit", {
+        res.render("admin/add_member", {
             docTitle: "Edit Member",
             path: "/admin/edit-member",
             editing: editMode,
