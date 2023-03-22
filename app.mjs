@@ -12,8 +12,10 @@ import errorRoute from "./routes/error.mjs";
 
 import Member from "./models/member.mjs";
 
-//const MONGODB_URI = "mongodb://127.0.0.1:27017/srmteamrobocon?retryWrites=true&w=majority";
-//const PORT = null;
+import * as dotenv from 'dotenv'
+
+const MONGO_URI = process.env.MONGO_URI;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 const MongoDBStore = connectMongoDBSession(session);
