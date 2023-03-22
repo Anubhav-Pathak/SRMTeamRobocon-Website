@@ -1,15 +1,17 @@
 <%- include("../includes/header.ejs") %>
 
-<main class="flex flex-col text-center px-2 pb-12 pt-[100px]">
-    
-    <h1 class="text-4xl mb-4">Meet the Team</h1>
-    <p class="mb-12">Through their unwavering commitment to the team and their relentless pursuit of excellence, these are the bunch of people who make it happen.</p>
+    <section class="pt-12 text-secondary font-secondary text-center">
+        <h1  class="text-4xl mb-4 text-center text-secondary font-primary">Meet the <span class="text-tertiary">Team</span></h1>
+        <p class="mb-12">Through their unwavering commitment to the team and their relentless pursuit of excellence, these are the bunch of people who make it happen.</p>
+    </section>
+   
+   
     
     <section class="mx-auto mb-12 max-w-7xl">
         <h1 class="text-left text-xl mb-4">OUR BOARD</h1>
         <section class="flex flex-wrap gap-8 items-center justify-evenly">
             <% for(member of board) { %>
-                <article class="h-[350px] flex flex-col max-w-xs items-center border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 hover:bg-black hover:text-white">
+                <article class="h-[350px] flex flex-col max-w-xs items-center border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 hover:bg-tertiary hover:text-white">
                     <img src="/images/people/<%= member.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
                     <h3 class="text-lg font-bold"><%= member.name %></h3>
                     <p><%= member.position %></p>
@@ -92,9 +94,5 @@
             <% } %>
         </section>
     </section>
-
-    
-
-</main>
 
 <%- include("../includes/footer.ejs") %>
