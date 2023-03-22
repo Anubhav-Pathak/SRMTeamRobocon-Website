@@ -1,78 +1,55 @@
-<%- include("../includes/header.ejs") %>
+<%- include("../includes/header.ejs") %>   
 
-<main class="pt-[100px] bg-dark-blue">
-    
-    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-100px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8 text-white text_orbitron">
-        
+    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-75px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8" >
         <article class="">
-            <h1 class="text-4xl text_eurofighter">Lorem <span class="text-red-600">ipsum</span> dolor sit </h1>
-            <p class="mt-4 text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vel! Culpa recusandae harum voluptates id? Suscipit recusandae laboriosam nobis eligendi!</p>
-            <button class="mt-8 bg-red-600 shadow-white shadow-sm px-4 py-2 md:px-8 md:py-4 rounded font-bold hover:bg-red-700"><a href="#">View More</a></button>
+            <h1 class="text-4xl font-primary text-secondary">Lorem <span class="text-quaternary">ipsum</span> dolor sit </h1>
+            <p class="mt-4 text-lg text-secondary font-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vel! Culpa recusandae harum voluptates id? Suscipit recusandae laboriosam nobis eligendi!</p>
+            <button class="mt-8 bg-glass px-4 py-2 md:px-8 md:py-4 font-primary text-secondary clip-1"><a href="#">View More</a></button>
         </article>
         
-        <img src="images/Robot.webp" alt="Robot" loading="lazy">
-        
-        <div class="col-span-full mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-center text-md md:text-2xl">
-            <div class=""><span id="members_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Members</caption></div>
-            <div class=""><span id="participations_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Participations</caption></div>
-            <div class=""><span id="robots_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Robots</caption></div>
-            <div class=""><span id="alumini_count" class="text-2xl md:text-4xl block">0+</span><caption class="">Alumnis</caption></div>
-        </div>
-
+        <img class="w-96" src="images/Embelem.gif" alt="Robot" loading="lazy">
     </section>
 
-    <!-- <section class="px-4 py-12 text-white text_orbitron" id="abu_section">
-        
-        <div class="mx-auto max-w-7xl">
-            <h1 class="text-4xl text_eurofighter mb-4">ABU Robocon <span class="text-red-600">2023</span></h1>
-            <img class="" src="images\ABU.png" alt="ABU Robocon Poster" loading="lazy">
-            <div class="" id="countdown"></div>
-            <button class="">Read More >></button>
-        </div>
-
-    </section> -->
-
-    <section class="pb-28">
-        <div class="flex flex-col md:flex-row mt-0 mr-0 items-center md:mt-56 md:mr-24">
-            <div class="mt-20 md:mt-0 md:ml-28 relative">
-                <img src="images\image1.png" alt="" class="p-7 md:p-0 md:w-img relative z-10">
-                <img src="images\robo1.png" alt="" class="w-60 absolute -top-40 left-bot1 hidden md:block " id="bot-1">
-            </div>
-            <div class="w-5/6 md:w-1/2 text-white md:ml-32 md:text-left divide-y-4 divide-robo-red mt-16">
-                <h2 class="text-5xl font-semibold text_eurofighter">Our Mission</h2>
-                <p class="pt-7 mt-4 text-2xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
-        </div>
-        <div class="flex flex-col items-center md:flex-row mt-20 md:mt-56 md:ml-24">
-            <div class="md:mr-28 relative block md:hidden">
-                <img src="images\image2.png" alt="" class="md:w-img relative z-10 p-7 md:p-0">
-                <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2 hidden">
-            </div>
-            <div class="w-5/6 md:w-1/2 text-white md:mr-32 md:text-right divide-y-4 divide-robo-red mt-16">
-                <h2 class="text-5xl font-semibold text_eurofighter">Our Vision</h2>
-                <p class="pt-7 mt-4 text-2xl ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p></div>
-            <div class="mr-28 relative flex invisible md:visible">
-                <img src="images\image2.png" alt="" class=" w-img relative z-10">
-                <img src="images\robo2.png" alt="" class="w-60 absolute -top-48 left-bot2 hidden md:block " id="bot-2">
+    <section class="py-36">
+        <h1 class="text-center text-4xl text-secondary font-primary mb-16">Projects <span class="text-tertiary">Done</span></h1>
+        <div class="swiper-project">
+            <div class="swiper-wrapper">
+                <% for(project of projects) { %>
+                    <div class="swiper-slide">
+                        <article class="h-[200px]">
+                            <img src="images/<%=project.name.png%>" alt="<%= project.name %>">
+                            <h1><%= project.name %></h1>
+                            <p><%= project.description %></p>
+                        </article>
+                    </div>
+                <% } %>
             </div>
         </div>
     </section>
-    <section class="bg-black flex backdrop-blur-md flex-col md:flex-row items-center md:justify-around mt-20 pt-16 pb-12">
-        <img src="images\robocon-logo.gif" alt="" class="w-72">
-        <div>
-            <h1 class="text-2xl md:text-4xl font-bold text-white">SRM TEAM ROBOCON</h1>
-            <p class="text-white font-semibold text-xl p-3">Robotics Reimagined</p>
-            <div class="flex flex-row justify-around mt-5">
-                <img src="images\logos\fb.svg" alt="" class="w-12">
-                <img src="images\logos\inst.svg" alt="" class="w-11">
-                <img src="images\logos\lin.svg" alt="" class="w-12">
-                <img src="images\logos\yo.svg" alt="" class="w-12">
-            </div>
-            <p class="text-white text-xl pt-10">5th Floor, Basic Engineering Lab, SRMIST, </p>
-            <p class="text-white text-xl">Kattankulathur, Chennai (603203)</p>
 
-        </div>
-        <img src="images\collegelogo.png" alt="" class="w-72">
+    <section class="flex flex-col gap-16 max-w-7xl mx-auto">
+        <article class="self-end xl:ml-[648px] bg-glass pt-2 pb-16 pl-16 pr-2 text-right clip-2 max-w-2xl">
+            <h1 class="text-4xl font-primary text-secondary">Our <span class="text-quaternary">Mission</span></h1>
+            <p class="mt-4 text-lg font-secondary text-secondary">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+        </article>
+        <article class="bg-inverted-glass pb-2 pt-16 pr-16 pl-2 text-left clip-3 max-w-2xl">
+            <h1 class="text-4xl font-primary text-secondary">Our <span class="text-quaternary">Vision</span></h1>
+            <p class="mt-4 text-lg font-secondary text-secondary">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+        </article>
     </section>
-</main>
+
+    <section class="py-36">
+        <h1 class="text-center text-4xl text-secondary font-primary mb-16">Partners & <span class="text-tertiary">Sponsors</span></h1>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 1.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 2.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 3.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 4.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 5.png" alt="Sponsor" loading="lazy"></div>
+                <div class="swiper-slide"><img src="images/sponsors/Sponsor 6.png" alt="Sponsor" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
 
 <%- include("../includes/footer.ejs") %>

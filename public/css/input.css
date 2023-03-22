@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  font-family: exo;
+  color: white;
+}
+
 ul.active{
   position: fixed;
   top: 91px;
@@ -41,126 +46,92 @@ ul.active a:hover{
   transform: rotateY(180deg);
 }
 
-.switch {
-    animation: switch .2s ease-in;
-}
-
-@keyframes switch {
-    0% {
-        scale: 1;
-    }
-    50% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
-    }
-}
-
-.hide {
-    display: none;
-}
-
-.unhide {
-    display: block;
-}
-
-
-
-
-
 .menu {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    padding: 0;
-  }
-  .line {
-    fill: none;
-    stroke: white;
-    stroke-width: 6;
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .line1 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-  }
-  .line2 {
-    stroke-dasharray: 60 60;
-    stroke-width: 6;
-  }
-  .line3 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-  }
-  .opened .line1 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 6;
-  }
-  .opened .line2 {
-    stroke-dasharray: 1 60;
-    stroke-dashoffset: -30;
-    stroke-width: 6;
-  }
-  .opened .line3 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 6;
-  }
-  
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
 
-  /* HOME CSS  START*/
+.clip-1{
+  clip-path: polygon(0 0, 95% 5%, 100% 100%, 5% 95%);
+  border: 1px solid #878787;
+}
+.clip-1:hover{
+  clip-path: inherit;
+  border: none;
+}
+.clip-2{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 81%);
+  border: 1px solid #878787;
+}
+.clip-3{
+  clip-path: polygon(0 0, 91% 9%, 100% 100%, 0 100%);
+  border: 1px solid #878787;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+form{
+  font-family: exo;
+  color: white;
+}
 
-  .orbitron_font {
-    font-family: 'Orbitron', sans-serif;
-  }
+form input, textarea{
+  color: white !important;
+  background: none;
+}
 
-  @font-face {
-    font-family: "euroFighter";
-    src: url("../fonts/eurofighter.ttf");
-  }
+.swiper, .swiper-project {
+  display: flex;
+  max-width: 1400px;
+  height: 150px;
+  margin: 0 auto;
+}
+.swiper-slide{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 
-  .text_eurofighter{
-    font-family: euroFighter;
-  }
-
-  @font-face {
-    font-family: "orbitron";
-    src: url("../fonts/Orbitron-Bold.ttf");
-  }
-
-  .text_orbitron{
-    font-family: orbitron;
-  }
-
-  .abu_image {
-    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
-    border-radius: 10px;
-  }
-
-  #abu_section{
-    background-image: url(../images/ABU_Robocon.png);
-    background-size: cover;
-
-    min-height: 100vh;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .abu_box{
-    border-radius: 50px;
-  }
-
-  #design1 {
-    width: 100vw;
-  }
-
-  /* HOME CSS STOP */
+@font-face {
+  font-family: "eurofighter";
+  src: url("../fonts/EuroFighterLaser.ttf");
+}
+@font-face {
+  font-family: "exo";
+  src: url("../fonts/ExoExtraLight.ttf");
+}

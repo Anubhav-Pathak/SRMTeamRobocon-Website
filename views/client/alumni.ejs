@@ -1,38 +1,52 @@
 <%- include("../includes/header.ejs") %>
-
-<main class="flex flex-col text-center px-2 pb-12 pt-[100px]">
     
-    <h1 class="text-4xl mb-4">Meet Our Alumnis</h1>
-    <p>The ones who have made our team what it is today and help us reach new heights through their unwavering support.</p>
-    <p class="mb-12">Our alumni present us with a unique opportunity to build a foundation of support to be a strong team.</p>
-
-    <section class="mb-12 flex flex-wrap gap-8 items-center justify-evenly">
-        <% for(alumni of alumnis) { %>
-            <article class="relative flip-card h-[400px] w-96 rounded-md duration-500 hover:-translate-y-2 hover:bg-black hover:text-white">
-                <div class="flip-card-inner border-2 rounded-md shadow-md ">
-                    <div class="flip-card-front  flex flex-col items-center p-2">
-                        <img src="/images/people/<%= alumni.memberId.name %>.jpg" class="mb-4 rounded-full w-[200px] h-[200px]">
-                        <h3 class="text-lg font-bold"><%= alumni.memberId.name %></h3>
-                        <p><%= alumni.memberId.position %></p>
-                        <q class="my-2"><%= alumni.description[1] %></q>
-                        <ul class="flex gap-4 mt-4">
-                            <li><a href="<%= alumni.memberId.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
-                            <li><a href="<%= alumni.memberId.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="flip-card-back rounded-md p-2 flex flex-col gap-2">
-                        <h1 class="text-xl font-bold">John Doe</h1>
-                        <p><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></p>
-                        <q class=""><%= alumni.quote %></q>
-                        <p class=""><%= alumni.description[1] %></p>
-                        <p><%= alumni.description[0] %></p>
-                    </div>
-                </div>
-                <button class="absolute bottom-2 right-2 flip-button">Read more &#8594;</button>
-            </article>
-        <% } %>
+    <section class="pt-12 text-secondary font-secondary text-center">
+      <h1 class="text-4xl mb-4 text-center text-secondary font-primary">Meet Our <span class="text-tertiary">Alumnis</span></h1>
+      <p>The ones who have made our team what it is today and help us reach new heights through their unwavering support.</p>
+      <p class="mb-12">Our alumni present us with a unique opportunity to build a foundation of support to be a strong team.</p>
     </section>
 
-</main>
+    <section class="mb-12 flex flex-wrap gap-8 items-center justify-evenly">
+      <% if(alumnis.length > 0) { %>
+          <% for(passout of alumnis) { %>
+              <h1 class="mb-4 text-center text-3xl font-primary"><%= Object.keys(passout) %></h1>
+              <section class="mb-8 flex flex-wrap gap-8 items-center justify-evenly">
+                  <% for(alumni of passout[Object.keys(passout)]) {%>
+                      <article class="">
+                        <div class="group h-96 w-80 [perspective:1000px]">
+                            <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-focus:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
+                              <div class="absolute inset-0 bg-slate-100">
+                                <img class="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src="/images/people/<%= alumni.memberId.name %>.jpg" alt="" />
+                                <h1 class="text-3xl font-bold absolute -mt-20 z-10 w-full bg-white/50 text-gray-900 group-hover:hidden"><%= alumni.memberId.name %> <br> <p class="text-lg"><%= alumni.memberId.position %>- <%= alumni.memberId.domain.toUpperCase() %></p> </h1>
+                                <!-- <h1 class="text-xl font-bold absolute -mt-20 z-10 w-full bg-white/50 text-gray-900 group-hover:hidden"><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></h1> -->
+                              </div>
+                              <div class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                                <div class="flex min-h-full flex-col items-center justify-center">
+                                  <h1 class="text-3xl font-bold"><%= alumni.memberId.name %></h1>
+                                  <p class="text-lg"><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></p>
+                                  <!-- <p class="text-base"><%= alumni.quote %></p> -->
+                                  <br>
+                                  <i class="fa-solid fa-quote-left mr-48"></i>
+                                  <p class="text-base"><%= alumni.description[1] %></p>
+                                  <i class="fa-solid fa-quote-right ml-48"></i>
+                                  <br>
+                                  <p class="text-base"><%= alumni.description[0] %></p>
+                                  <ul class="flex gap-4 mt-4">
+                                    <li><a href="<%= alumni.memberId.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
+                                    <li><a href="<%= alumni.memberId.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
+                                  </ul>
+                                  <button class="mt-2 rounded-md bg-neutral-800 py-1 px-2 text-sm hover:bg-neutral-900">Read More</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </article>
+                  <% } %>
+              </section>
+          <% } %>
+      <% } else { %>
+          <h1 class="text-xl text-secondary font-secondary">No Alumnis :(</h1>
+      <% } %>
+  </section>
 
 <%- include("../includes/footer.ejs") %>

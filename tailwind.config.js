@@ -3,42 +3,21 @@ module.exports = {
   content: ["./views/**/*.ejs"],
   theme: {
     extend: {
+      fontFamily: {
+        'primary': ['eurofighter', 'Times'],
+        'secondary' : ['exo', 'sans-serif']
+      },
       colors: {
-        'dark-blue' : '#09141F',
-        'robo-red' : "#FF0000"
+        'primary': "#171924",
+        'secondary': "#FFFFFF",
+        'tertiary': "#878787",
+        'quaternary': "#004CAA"
       },
-      spacing: {
-        'img': '42rem',
-        'bot1': '31rem',
-        'bot2': '20rem',
-        'himg': '38rem'
+      backgroundImage: {
+        'glass': "linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.01) 100%)",
+        'inverted-glass': "linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.01) 100%)",
+        'footer': "linear-gradient(180deg, #171924 15.1%, rgba(135, 135, 135, 1) 100%)"
       },
-      keyframes: {
-        jump1: {
-          '0%' : {top: '0rem', left: '25rem'},
-          '75%' : {top: '-11rem', left: '31.5rem'},
-          '100%' : {top: '-10rem', left: '31rem'}
-        },
-        jump2: {
-          '0%' : {top: '0rem'},
-          '75%' : {top: '-14rem'},
-          '100%' : {top: '-12rem'}
-        },
-        go: {
-          '0%' : {scale: 1},
-          '100%': {scale: 0, display: 'none'},
-        },
-        come: {
-          '0%' : {scale: 0, display: 'block'},
-          '100%': {scale: 1},
-        }
-      },
-      animation: {
-        'jumping-bot1': 'jump1 .7s ease-in',
-        'jumping-bot2': 'jump2 .7s ease-in',
-        'icon-go': 'go .2s ease-in forwards',
-        'icon-come': 'come .2s ease-in forwards'
-      }
     },
   },
   plugins: [],
