@@ -18,7 +18,9 @@ export const getAddMember = (req, res, next) => {
     res.render("admin/add_member", {
         docTitle: "Admin | Add Member",
         path: "admin/add",
-        editing: false
+        editing: false,
+        dob: "",
+        doj: ""
     })
 }
 
