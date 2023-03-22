@@ -1,5 +1,10 @@
 import express from "express";
-import { getAchievements, getAddAchievements, getAddAlumni, getAddMember, getAddProjects, getAddTasks, getAlumni, getDetailsAlumni, getEditAchievement, getEditMember, getEditProject, getHome, getProjects, getTeam, postAddAchievement, postAddAlumni, postAddMember, postAddProject, postDeleteAchievement, postDeleteAlumni, postDeleteMember, postDeleteProject, postEditAchievement, postEditMember, postEditProject } from "../controllers/admin.mjs";
+import getHome from "../controllers/admin.mjs";
+import {getTeam, getAddMember, postAddMember, getEditMember, postEditMember, postDeleteMember} from "../controllers/Admin/Team.mjs"
+import {getAlumni, getAddAlumni, postAddAlumni, postDeleteAlumni, getDetailsAlumni} from "../controllers/Admin/Alumni.mjs"
+import {getAchievements, getAddAchievements, postAddAchievement, getEditAchievement, postEditAchievement, postDeleteAchievement} from "../controllers/Admin/Achievement.mjs"
+import {getProjects, getAddProjects, postAddProject, getEditProject, postEditProject, postDeleteProject} from "../controllers/Admin/Project.mjs";
+import {getAddTasks} from "../controllers/Admin/Task.mjs";
 import isAuthorized from "../middlewares/isAuthorized.mjs"
 
 const router = express.Router();
@@ -7,7 +12,6 @@ const router = express.Router();
 router.get("/", isAuthorized, getHome);
 
 router.get("/team", isAuthorized, getTeam);
-
 router.get("/add", isAuthorized, getAddMember);
 router.post("/add", isAuthorized, postAddMember);
 router.get("/edit-member/:memberId", isAuthorized, getEditMember);
