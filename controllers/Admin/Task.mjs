@@ -39,3 +39,10 @@ export const postAddTask = (req, res, next) => {
     .then(()=>res.redirect("/admin/task"))
     .catch(e => console.log(e));
 }
+
+export const postDeleteTask = (req, res, next) => {
+    const taskId = req.body.taskId;
+    Tasks.findByIdAndDelete(taskId)
+    .then(() => res.redirect("/admin/task"))
+    .catch(e => console.log(e));
+}
