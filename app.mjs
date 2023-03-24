@@ -12,13 +12,15 @@ import errorRoute from "./routes/error.mjs";
 
 import Member from "./models/member.mjs";
 
-const MONGODB_URI = "mongodb://127.0.0.1:27017/srmteamrobocon";
-const PORT = null;
+import * as dotenv from 'dotenv'
+
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/srmteamrobocon";
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 const MongoDBStore = connectMongoDBSession(session);
 const store = new MongoDBStore({
-    uri: MONGODB_URI,
+    uri: MONGO_URI,
     collection: "sessions",
 })
 
@@ -54,7 +56,7 @@ app.use(clientRoute);
 app.use(errorRoute);
 
 mongoose.set('strictQuery', true);
-mongoose.connect(MONGODB_URI)
+mongoose.connect(MONGO_URI)
 .then(() => {
     console.log("Database Connected !");
     app.listen(PORT || 3000);
