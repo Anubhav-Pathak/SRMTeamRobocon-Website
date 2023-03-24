@@ -150,3 +150,22 @@ form input, textarea{
   background: #878787; 
   border-radius: 32px;
 }
+
+/* Image lazy loading */
+
+.load {
+  opacity: 0;
+  transform: translateY(-5%);
+  animation: fadeDown 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-5%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
