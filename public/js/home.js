@@ -35,3 +35,33 @@ const swiperSponsor = new Swiper('.swiper-project', {
   },
   slidesPerView: 1,
 });
+
+const targets = document.querySelectorAll('#images img');
+
+const options = {
+  root: document.querySelector('[data-scroll-root]'),
+  rootMargin: "500px",
+  threshold: 0
+}
+
+const lazyLoad = target => {
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      console.log('entry');
+
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        const src = img.getAttribute('data-lazy');
+
+        img.setAttribute('src', src);
+        img.classList.add('load');
+
+        // observer.disconnect();
+      }
+    });
+  }, options);
+
+  io.observe(target)
+};
+
+targets.forEach(lazyLoad); 
