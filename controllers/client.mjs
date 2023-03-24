@@ -42,6 +42,13 @@ export const getTeam = (req, res, next) => {
     .catch(e => console.log(e));
 }
 
+export const getGallery = (req, res, next) => {
+    res.render("client/gallery", {
+        docTitle: "Our Snapshots",
+        path: "/gallery",
+    })
+}
+
 export const getAlumni = (req, res, next) => {
     Alumni.find()
     .then(alumnis => {
