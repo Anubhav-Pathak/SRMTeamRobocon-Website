@@ -14,7 +14,7 @@ import Member from "./models/member.mjs";
 
 import * as dotenv from 'dotenv'
 
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/srmteamrobocon";
 const PORT = process.env.PORT || 3000;
 
 const app = express();

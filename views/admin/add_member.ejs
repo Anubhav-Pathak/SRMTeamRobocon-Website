@@ -3,7 +3,6 @@
 <main class="min-h-screen flex flex-col justify-center items-center px-2 pb-12 pt-24">
 
     <form action="/admin/<% if(editing) { %>edit-member?edit=true<% } else { %>add<% } %>" method="POST" class="flex flex-col gap-2 p-4 border-2 rounded-lg shadow-md">
-        
         <div class="form-control border-b-2">
             <label for="name" class="block"> Name: </label>
             <input type="text" id="name" name="name"  value="<% if(editing) { %><%=member.name%><% } else { %><% } %>" placeholder="John Doe" required class="outline-none w-full">
