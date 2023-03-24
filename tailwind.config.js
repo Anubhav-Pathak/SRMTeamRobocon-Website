@@ -11,7 +11,8 @@ module.exports = {
         'primary': "#171924",
         'secondary': "#FFFFFF",
         'tertiary': "#878787",
-        'quaternary': "#004CAA"
+        'quaternary': "#004CAA",
+        'penternary': "#C20000",
       },
       backgroundImage: {
         'glass': "linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.01) 100%)",

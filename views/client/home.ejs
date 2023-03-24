@@ -16,10 +16,10 @@
             <div class="swiper-wrapper">
                 <% for(project of projects) { %>
                     <div class="swiper-slide">
-                        <article class="h-[200px]">
-                            <img src="images/<%=project.name.png%>" alt="<%= project.name %>">
-                            <h1><%= project.name %></h1>
-                            <p><%= project.description %></p>
+                        <article class="max-w-2xl h-80 overflow-y-scroll scroll">
+                            <img src="images/project/<%=project.name%>.jpg" alt="<%= project.name %>" width="200px" class="mx-auto mb-2">
+                            <h1 class="text-center text-xl mb-4"><%= project.name %></h1>
+                            <p class="leading-8"><%= project.description %></p>
                         </article>
                     </div>
                 <% } %>
@@ -27,20 +27,45 @@
         </div>
     </section>
 
-    <section class="flex flex-col gap-16 max-w-7xl mx-auto">
-        <article class="self-end xl:ml-[648px] bg-glass pt-2 pb-16 pl-16 pr-2 text-right clip-2 max-w-2xl">
-            <h1 class="text-4xl font-primary text-secondary">Our <span class="text-quaternary">Mission</span></h1>
-            <p class="mt-4 text-lg font-secondary text-secondary">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
-        </article>
-        <article class="bg-inverted-glass pb-2 pt-16 pr-16 pl-2 text-left clip-3 max-w-2xl">
-            <h1 class="text-4xl font-primary text-secondary">Our <span class="text-quaternary">Vision</span></h1>
-            <p class="mt-4 text-lg font-secondary text-secondary">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+    <section class="pt-12 pb-36">
+        <h1 class="font-primary text-4xl text-right mr-[8vw] mb-4">About <span class="text-tertiary">Us</span></h1>
+        <article class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+            <div class="grid grid-cols-2 grid-rows-2 gap-16 text-7xl">
+                <div class="text-center">
+                    <p>$</p>
+                    <p class="sm:text-lg text-sm">Members</p>
+                </div>
+                <div class="text-center text-quaternary">
+                    <p>$</p>
+                    <p class="sm:text-lg text-sm">Members</p>
+                </div>
+                <div class="text-center text-penternary">
+                    <p>$</p>
+                    <p class="sm:text-lg text-sm">Members</p>
+                </div>
+                <div class="text-center">
+                    <p>$</p>
+                    <p class="sm:text-lg text-sm">Members</p>
+                </div>
+            </div>
+            <p class="max-w-2xl text-right text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non adipisci accusantium laborum tempore ratione rerum impedit ab atque animi, modi earum quisquam, ipsa numquam iusto corrupti, fuga rem fugit similique? Eum sapiente officiis expedita blanditiis natus omnis doloribus, laborum rem.</p>
         </article>
     </section>
 
-    <section class="py-36">
+    <section class="flex flex-col gap-16 max-w-7xl mx-auto pt-12 pb-48">
+        <article class="self-end xl:ml-[648px] bg-glass pt-2 pb-16 pl-16 pr-2 text-right clip-2 max-w-2xl">
+            <h1 class="text-4xl font-primary">Our <span class="text-quaternary">Mission</span></h1>
+            <p class="mt-4 text-lg">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+        </article>
+        <article class="bg-inverted-glass pb-2 pt-16 pr-16 pl-2 text-left clip-3 max-w-2xl">
+            <h1 class="text-4xl font-primary text-secondary">Our <span class="text-penternary">Vision</span></h1>
+            <p class="mt-4 text-lg">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+        </article>
+    </section>
+
+    <section class="pt-12 pb-36">
         <h1 class="text-center text-4xl text-secondary font-primary mb-16">Partners & <span class="text-tertiary">Sponsors</span></h1>
-        <div class="swiper">
+        <div class="swiper-sponsor">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="images/sponsors/Sponsor 1.png" alt="Sponsor" loading="lazy"></div>
                 <div class="swiper-slide"><img src="images/sponsors/Sponsor 2.png" alt="Sponsor" loading="lazy"></div>

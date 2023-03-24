@@ -1,6 +1,6 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper-sponsor', {
     loop: true,
     autoplay: {
         delay: 1000,
@@ -31,19 +31,7 @@ const swiper = new Swiper('.swiper', {
 const swiperSponsor = new Swiper('.swiper-project', {
   loop: true,
   autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
+      delay: 5000,
   },
   slidesPerView: 1,
-  spaceBetween: 10,
-  breakpoints: {
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 30
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 40
-    },
-  }
 });

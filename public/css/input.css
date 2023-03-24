@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "eurofighter";
+  src: url("../fonts/EuroFighterLaser.ttf");
+}
+@font-face {
+  font-family: "exo";
+  src: url("../fonts/ExoExtraLight.ttf");
+}
+
 body{
   font-family: exo;
   color: white;
@@ -14,7 +23,8 @@ ul.active{
   transform: translateY(0px);
   transition-duration: 0.5s;
   width: calc(100% - 32px);
-  background-color: black;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 2px solid #878787;
   text-align: center;
 }
 ul.active a {
@@ -22,7 +32,7 @@ ul.active a {
   padding: 16px;
 }
 ul.active a:hover{
-    background-color: rgb(10, 10, 10);
+    background-color: rgba(0,0,0,0.2);
 }
 
 .flip-card {
@@ -115,11 +125,17 @@ form input, textarea{
   background: none;
 }
 
-.swiper, .swiper-project {
+.swiper-sponsor, .swiper-project {
   display: flex;
   max-width: 1400px;
-  height: 150px;
   margin: 0 auto;
+  overflow: hidden;
+}
+.swiper-project{
+  height: 400px;
+}
+.swiper-sponsor{
+  height: 150px;
 }
 .swiper-slide{
   display: flex !important;
@@ -127,11 +143,10 @@ form input, textarea{
   justify-content: center !important;
 }
 
-@font-face {
-  font-family: "eurofighter";
-  src: url("../fonts/EuroFighterLaser.ttf");
+.scroll::-webkit-scrollbar {
+  width: 5px;
 }
-@font-face {
-  font-family: "exo";
-  src: url("../fonts/ExoExtraLight.ttf");
+.scroll::-webkit-scrollbar-thumb {
+  background: #878787; 
+  border-radius: 32px;
 }

@@ -5,7 +5,7 @@
     </section>
     <section>
         <% for(project of projects) { %>
-            <article class="h flex flex-col max-w-xs border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2">
+            <article class="h flex flex-col max-w-xs border-2 shadow-md duration-500 rounded-lg p-4 hover:-translate-y-2 max-h-80 overflow-y-scroll scroll">
                 <h2 class="text-xl"><%= project.name %></h2>
                 <p><%= project.description %></p>
                 <ul class="flex gap-4 mt-8">
