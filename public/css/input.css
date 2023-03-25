@@ -153,10 +153,19 @@ form input, textarea{
 
 /* Image lazy loading */
 
+/* #images img {
+  visibility: hidden;
+}
+
+#images div div {
+  min-height: 200px;
+} */
+
 .load {
+  visibility: visible !important;
   opacity: 0;
   transform: translateY(-5%);
-  animation: fadeDown 0.5s ease-in-out forwards;
+  animation: fadeDown 0.7s ease-in-out forwards;
 }
 
 @keyframes fadeDown {
