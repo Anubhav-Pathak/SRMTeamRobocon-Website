@@ -1,9 +1,11 @@
 <%- include("../includes/header.ejs") %>   
 
-    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-75px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8" >
+    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-75px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8" id="home">
         <article class="four animate">
-            <h1 class="text-4xl font-primary text-secondary">Lorem <span class="text-quaternary">ipsum</span> dolor sit </h1>
-            <p class="mt-4 text-lg text-secondary font-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vel! Culpa recusandae harum voluptates id? Suscipit recusandae laboriosam nobis eligendi!</p>
+            <h1 class="text-4xl font-primary text-secondary">LEAD <span class="text-quaternary">IN</span></h1>
+            <p class="mt-4 text-lg text-secondary font-secondary">Welcome to the official website of the Robocon team!<br>
+                We are a robotics team where we design and build robots to compete in specific tasks. Our team consists of passionate students from various disciplines who collaborate to design and develop a winning robot.
+                </p>
             <button class="mt-8 bg-glass px-4 py-2 md:px-8 md:py-4 font-primary text-secondary clip-1"><a href="#">View More</a></button>
         </article>
         
@@ -11,7 +13,7 @@
     </section>
 
     <section class="py-36">
-        <h1 class="text-center text-4xl text-secondary font-primary mb-16 three animate">Projects <span class="text-tertiary">Done</span></h1>
+        <h1 class="text-center text-4xl text-secondary font-primary mb-16 three animate" id="projects">Projects <span class="text-tertiary">Done</span></h1>
         <div class="swiper-project">
             <div class="swiper-wrapper">
                 <% for(project of projects) { %>
@@ -28,7 +30,7 @@
     </section>
 
     <section class="pt-12 pb-36">
-        <h1 class="font-primary text-4xl text-right mr-[8vw] mb-4 three animate">About <span class="text-tertiary">Us</span></h1>
+        <h1 class="font-primary text-4xl text-right mr-[8vw] mb-4 five animate">About <span class="text-tertiary">Us</span></h1>
         <article class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
             <div class="grid grid-cols-2 grid-rows-2 gap-16 text-7xl">
                 <div class="text-center">
@@ -48,18 +50,19 @@
                     <p class="sm:text-lg text-sm">Members</p>
                 </div>
             </div>
-            <p class="max-w-2xl text-right text-lg five animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non adipisci accusantium laborum tempore ratione rerum impedit ab atque animi, modi earum quisquam, ipsa numquam iusto corrupti, fuga rem fugit similique? Eum sapiente officiis expedita blanditiis natus omnis doloribus, laborum rem.</p>
+            <p class="max-w-2xl text-right text-lg five animate mr-2">Our team is a melting pot of diverse students passionate about robotics & engineering dedicated to participate in ABU Robocon and other competitions to showcase our skills. We prioritize effective communication, collaboration, and problem-solving skills, believing they are essential in the world, and strive to develop them through our projects and activities.
+                </p>
         </article>
     </section>
 
     <section class="flex flex-col gap-16 max-w-7xl mx-auto pt-12 pb-48">
         <article class="self-end xl:ml-[648px] bg-glass pt-2 pb-16 pl-16 pr-2 text-right clip-2 max-w-2xl four animate">
             <h1 class="text-4xl font-primary">Our <span class="text-quaternary">Mission</span></h1>
-            <p class="mt-4 text-lg">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+            <p class="mt-4 text-lg">We explore new technologies and innovative solutions to real-world problems and aim to develop robots that can perform tasks autonomously, efficiently, and safely.  We strive to push the boundaries of what is possible with robotics and make a positive impact on our community and the world.</p>
         </article>
         <article class="bg-inverted-glass pb-2 pt-16 pr-16 pl-2 text-left clip-3 max-w-2xl five animate">
             <h1 class="text-4xl font-primary text-secondary">Our <span class="text-penternary">Vision</span></h1>
-            <p class="mt-4 text-lg">Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced.</p>
+            <p class="mt-4 text-lg">Our vision for the team is to become a leading force in the field of robotics and technology at SRMIST and inspire the next generation of technology enthusiasts. </p>
         </article>
     </section>
 
