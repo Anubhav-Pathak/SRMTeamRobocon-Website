@@ -2,8 +2,8 @@
     
     <section class="pt-12 text-secondary font-secondary text-center">
       <h1 class="text-4xl mb-4 text-center text-secondary font-primary">Meet Our <span class="text-tertiary">Alumnis</span></h1>
-      <p>The ones who have made our team what it is today and help us reach new heights through their unwavering support.</p>
-      <p class="mb-12">Our alumni present us with a unique opportunity to build a foundation of support to be a strong team.</p>
+      <p class="mb-12">Our mentors,who have passed down all the resources needed to reach new heights, through the foundation they built based on innovation and commendable work ethic.</p>
+      <!-- <p class="mb-12">Our alumni present us with a unique opportunity to build a foundation of support to be a strong team.</p> -->
     </section>
 
     <section class="mb-12 flex flex-wrap gap-8 items-center justify-evenly">
@@ -14,13 +14,13 @@
                   <% for(alumni of passout[Object.keys(passout)]) {%>
                       <article class="">
                         <div class="group h-96 w-80 [perspective:1000px]">
-                            <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-focus:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
+                            <div class="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-focus:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
                               <div class="absolute inset-0 bg-slate-100">
-                                <img class="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src="/images/people/<%= alumni.memberId.name %>.jpg" alt="" />
-                                <h1 class="text-3xl font-bold absolute -mt-20 z-10 w-full bg-white/50 text-gray-900 group-hover:hidden"><%= alumni.memberId.name %> <br> <p class="text-lg"><%= alumni.memberId.position %>- <%= alumni.memberId.domain.toUpperCase() %></p> </h1>
+                                <img class="h-full w-full object-cover shadow-xl shadow-black/40" src="/images/people/<%= alumni.memberId.name %>.jpg" alt="" />
+                                <h1 class="text-3xl font-bold absolute -mt-20 z-10 w-full bg-white/50 text-gray-900 group-hover:hidden text-center"><%= alumni.memberId.name %> <br> <p class="text-lg"><%= alumni.memberId.position %>- <%= alumni.memberId.domain.toUpperCase() %></p> </h1>
                                 <!-- <h1 class="text-xl font-bold absolute -mt-20 z-10 w-full bg-white/50 text-gray-900 group-hover:hidden"><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></h1> -->
                               </div>
-                              <div class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                              <div class="absolute inset-0 h-full w-full bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                                 <div class="flex min-h-full flex-col items-center justify-center">
                                   <h1 class="text-3xl font-bold"><%= alumni.memberId.name %></h1>
                                   <p class="text-lg"><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></p>
@@ -35,7 +35,6 @@
                                     <li><a href="<%= alumni.memberId.linkedIn %>"><i class="fa-xl fab fa-linkedin"></i></a></li>
                                     <li><a href="<%= alumni.memberId.instagram %>"><i class="fa-xl fab fa-instagram-square"></i></a></li>
                                   </ul>
-                                  <button class="mt-2 rounded-md bg-neutral-800 py-1 px-2 text-sm hover:bg-neutral-900">Read More</button>
                                 </div>
                               </div>
                             </div>
