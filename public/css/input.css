@@ -152,14 +152,14 @@ form input, textarea{
 }
 
 /* Image lazy loading */
-
-/* #images img {
+/* 
+#images img {
   visibility: hidden;
-}
-
-#images div div {
-  min-height: 200px;
 } */
+
+#images img{
+  height: 500px;
+}
 
 .load {
   visibility: visible !important;

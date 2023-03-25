@@ -40,9 +40,16 @@ const swiperSponsor = new Swiper('.swiper-project', {
 
 const targets = document.querySelectorAll('#images img');
 
+targets.forEach(image => {
+  image.addEventListener('load', function () {
+    image.style.height = 'auto';
+    console.log(image);
+  })
+})
+
 const options = {
-  root: document.querySelector('[data-scroll-root]'),
-  rootMargin: "500px",
+  root: null,
+  rootMargin: "0px",
   threshold: 1
 }
 
@@ -73,23 +80,23 @@ targets.forEach(lazyLoad);
 
 // Stat Count
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
   var members_count = document.getElementById("members_count");
   var participations_count = document.getElementById("participations_count");
   var robots_count = document.getElementById("robots_count");
   var alumini_count = document.getElementById("alumini_count");
-  
+
   function count_intersection_animation(element, x, t) {
 
     function increase(element = {}, x) {
       let counts = setInterval(updated, t);
       let upto = 0;
-    
+
       function updated() {
-          element.innerHTML = ++upto + "+";
-          if (upto === x) {
-              clearInterval(counts);
-          }
+        element.innerHTML = ++upto + "+";
+        if (upto === x) {
+          clearInterval(counts);
+        }
       }
     }
 
@@ -101,7 +108,7 @@ window.addEventListener('load', function(){
         }
       })
     }
-  
+
     const options = {
       root: null,
       rootMargin: '0px',
@@ -110,10 +117,10 @@ window.addEventListener('load', function(){
     const myObserver = new IntersectionObserver(callback, options)
     myObserver.observe(element)
   }
-  
-  count_intersection_animation(members_count, 65, 1000/65)
-  count_intersection_animation(participations_count, 6, 1000/6)
-  count_intersection_animation(robots_count, 11, 1000/11)
-  count_intersection_animation(alumini_count, 100, 1000/100)
-  
+
+  count_intersection_animation(members_count, 65, 1000 / 65)
+  count_intersection_animation(participations_count, 6, 1000 / 6)
+  count_intersection_animation(robots_count, 11, 1000 / 11)
+  count_intersection_animation(alumini_count, 100, 1000 / 100)
+
 })
