@@ -8,15 +8,7 @@ const images = document.querySelectorAll('.one');
         observer.observe(imaged)
     })
 	
-	const images2 = document.querySelectorAll('.two'); 
-    observer2 = new IntersectionObserver((entries2)=>{ 
-        entries2.forEach(entry => {
-           entry.target.classList.toggle("fadeUp", entry.isIntersecting)  
-        }),{threshold: 1}
-    })
-    images2.forEach(imaged=>{
-        observer2.observe(imaged)
-    })
+	 
 
 	const images3 = document.querySelectorAll('.three'); 
     observer3 = new IntersectionObserver((entries3)=>{ 

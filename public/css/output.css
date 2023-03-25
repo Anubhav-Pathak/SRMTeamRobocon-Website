@@ -1418,12 +1418,16 @@ form input, textarea{
   }
 }
 
-.one{
+/* Scroll animation by Amshu */
+
+/* .one,.three,.four,.five{
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
   animation-delay: 1s;
-}
+}  */
 
 .animate{
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
 }
