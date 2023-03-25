@@ -1418,6 +1418,78 @@ form input, textarea{
   }
 }
 
+.one{
+  animation-delay: 1s;
+}
+
+.animate{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+.fadeIn{
+  animation-name: fadeIn;
+}
+
+@keyframes fadeDown{
+  from{
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+  }
+
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeDown{
+  animation-name: fadeDown;
+}
+
+@keyframes fadeLeft{
+  from{
+    opacity: 0;
+    transform: translate3d(-100%,0,0);
+  }
+
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeLeft{
+  animation-name: fadeLeft;
+}
+
+@keyframes fadeRight{
+  from{
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+  }
+
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeRight{
+  animation-name: fadeRight;
+}
+
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
