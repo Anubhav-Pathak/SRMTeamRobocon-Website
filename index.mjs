@@ -12,10 +12,11 @@ import errorRoute from "./routes/error.mjs";
 
 import Member from "./models/member.mjs";
 
-import * as dotenv from 'dotenv'
+import dotenv from 'dotenv'
+dotenv.config();
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/srmteamrobocon";
-const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/srmteamrobocon";
+const PORT = process.env.PORT;
 
 const app = express();
 const MongoDBStore = connectMongoDBSession(session);
@@ -59,6 +60,6 @@ mongoose.set('strictQuery', true);
 mongoose.connect(MONGO_URI)
 .then(() => {
     console.log("Database Connected !");
-    app.listen(PORT || 3000);
+    app.listen(PORT);
 })
 .catch(e => console.log(e));

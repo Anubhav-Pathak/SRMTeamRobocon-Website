@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
-    "start": "node app.mjs",
-    "dev": "nodemon app.mjs"
+    "start": "nodemon index.mjs"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,6 @@
   },
   "homepage": "https://github.com/Anubhav-Pathak/SRMTeamRobocon-Website#readme",
   "dependencies": {
-    "animate.css": "^4.1.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
     "connect-mongodb-session": "^3.1.1",
