@@ -16,14 +16,14 @@ export const getHome = (req, res, next) => {
 }
 
 export const getTeam = (req, res, next) => {
-    const sambed = [], siased = [], spaced = [], mcsocd = [], board = [];
+    const sambed = [], siesed = [], spaced = [], mcsocd = [], board = [];
     let teamLead;
     Member.find()
     .then(members => {
         return members.map(member => {
             if(member.position === "Team lead" || member.position === "Lead") board.push(member);
             else if(member.domain === "sambed") sambed.push(member);
-            else if(member.domain === "siased") siased.push(member);
+            else if(member.domain === "siesed") siesed.push(member);
             else if(member.domain === "spaced") spaced.push(member);
             else mcsocd.push(member);
         })
@@ -34,7 +34,7 @@ export const getTeam = (req, res, next) => {
             path: "/team",
             board: board,
             sambed: sambed,
-            siased: siased,
+            siesed: siesed,
             spaced: spaced,
             mcsocd: mcsocd
         });
