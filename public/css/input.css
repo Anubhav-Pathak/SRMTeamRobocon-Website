@@ -14,6 +14,25 @@
 body{
   font-family: exo;
   color: white;
+  overflow-x: hidden;
+}
+
+.link{
+  position: relative;
+  padding-bottom: 5px;
+}
+.link::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20px;
+  border-bottom: 2px solid #C20000;
+  transition: 0.5s;
+}
+.link:hover::before{
+  width: 100%;
 }
 
 ul.active{

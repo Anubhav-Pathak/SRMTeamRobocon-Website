@@ -60,6 +60,7 @@ export const getAlumni = (req, res, next) => {
         });
         res.render("client/alumni", {
             docTitle: `Admin | Alumni`,
+            path: '/alumni',
             alumnis: passouts,
         })
     })

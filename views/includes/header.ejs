@@ -31,14 +31,14 @@
             <a href="/"><img width="150px" src="images\Logo.svg" alt="Logo" loading="lazy"></a>
         <% } %>
 
-        <ul id="menu" class="md:flex gap-x-4 -translate-y-[100vh] md:-translate-y-0 font-secondary text-base text-secondary">
+        <ul id="menu" class="md:flex gap-x-12 -translate-y-[100vh] md:-translate-y-0 font-secondary text-base text-secondary">
             <% if(!isAuthenticated) { %>
-                <li><a href="/">Home</a></li>
-                <li><a href="/team">Our Team</a></li>
-                <li><a href="/gallery">Gallery</a></li>
-                <li><a href="/achievements">Achievements</a></li>
-                <!-- <li><a href="/blogs">Blogs</a></li> -->
-                <li><a href="/alumni">Alumni</a></li>
+                <li><a href="/" class="<%= path === '/' ? 'link' : '' %>">Home</a></li>
+                <li><a href="/team" class="<%= path === '/team' ? 'link' : '' %>">Our Team</a></li>
+                <li><a href="/gallery" class="<%= path === '/gallery' ? 'link' : '' %>">Gallery</a></li>
+                <li><a href="/achievements" class="<%= path === '/achievements' ? 'link' : '' %>">Achievements</a></li>
+                <!-- <li><a href="/blogs" class="<%= path === '/blogs' ? 'link' : '' %>">Blogs</a></li> -->
+                <li><a href="/alumni" class="<%= path === '/alumni' ? 'link' : '' %>">Alumni</a></li>
             <% } else { %>
                 <li><a href="/admin/">Panel</a></li>
                 <li><a href="/admin/task">Tasks</a></li>
