@@ -532,6 +532,18 @@ video {
   left: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -658,6 +670,22 @@ video {
   height: 75px;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
 .max-h-80 {
   max-height: 20rem;
 }
@@ -702,6 +730,22 @@ video {
   width: 9rem;
 }
 
+.w-\[100\%-16px\] {
+  width: 100%-16px;
+}
+
+.w-\[calc\(100\%-16px\)\] {
+  width: calc(100% - 16px);
+}
+
+.w-\[calc\(100\%-32px\)\] {
+  width: calc(100% - 32px);
+}
+
+.w-12 {
+  width: 3rem;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
@@ -720,6 +764,10 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .-translate-y-\[100vh\] {
@@ -761,6 +809,10 @@ video {
 
 .place-items-center {
   place-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-end {
@@ -879,6 +931,11 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .bg-slate-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
@@ -909,6 +966,16 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-tertiary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(135 135 135 / var(--tw-bg-opacity));
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-none {
@@ -978,6 +1045,11 @@ video {
   padding-bottom: 9rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1036,6 +1108,10 @@ video {
 
 .pt-\[75px\] {
   padding-top: 75px;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .text-left {
@@ -1140,6 +1216,11 @@ video {
 .text-penternary {
   --tw-text-opacity: 1;
   color: rgb(194 0 0 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .shadow-md {
@@ -1594,6 +1675,18 @@ form input, textarea{
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-\[6vw\] {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .lg\:px-\[8vw\] {
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 }
 
