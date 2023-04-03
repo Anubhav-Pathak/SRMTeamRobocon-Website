@@ -646,10 +646,6 @@ video {
   height: auto;
 }
 
-.h-80 {
-  height: 20rem;
-}
-
 .h-\[350px\] {
   height: 350px;
 }
@@ -700,18 +696,6 @@ video {
 
 .w-96 {
   width: 24rem;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
-.w-24 {
-  width: 6rem;
 }
 
 .w-36 {
@@ -943,11 +927,6 @@ video {
   background-image: linear-gradient(180deg, #171924 15.1%, rgba(135, 135, 135, 1) 100%);
 }
 
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1128,10 +1107,6 @@ video {
   font-weight: 700;
 }
 
-.leading-8 {
-  line-height: 2rem;
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1165,11 +1140,6 @@ video {
 .text-penternary {
   --tw-text-opacity: 1;
   color: rgb(194 0 0 / var(--tw-text-opacity));
-}
-
-.text-fuchsia-100 {
-  --tw-text-opacity: 1;
-  color: rgb(250 232 255 / var(--tw-text-opacity));
 }
 
 .shadow-md {
@@ -1401,15 +1371,11 @@ form input, textarea{
   background: none;
 }
 
-.swiper-sponsor, .swiper-project {
+.swiper-sponsor, .swiper-project{
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
-}
-
-.swiper-project{
-  height: 400px;
 }
 
 .swiper-sponsor{
@@ -1420,6 +1386,11 @@ form input, textarea{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+.swiper-project .swiper-slide {
+  width: 300px;
+  height: 300px;
 }
 
 .scroll::-webkit-scrollbar {
