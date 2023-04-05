@@ -16,10 +16,9 @@
             <div class="swiper-wrapper">
                 <% for(project of projects) { %>
                     <div class="swiper-slide">
-                        <article class="max-w-2xl h-80 overflow-y-scroll scroll">
+                        <article class="">
                             <img src="images/project/<%=project.name%>.jpg" alt="<%= project.name %>" width="200px" class="mx-auto mb-2">
                             <h1 class="text-center text-xl mb-4"><%= project.name %></h1>
-                            <p class="leading-8"><%= project.description %></p>
                         </article>
                     </div>
                 <% } %>

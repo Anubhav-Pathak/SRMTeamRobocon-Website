@@ -16,7 +16,7 @@
             <li><strong>Passout Year: </strong><%= alumni.passoutYear %></li>
         
         </ul>
-        <fieldset class="border-2 border-black p-2">
+        <fieldset class="border-2 border-secondary p-2">
             <legend class="font-bold text-xl">Personalia</legend>
             <label class="font-bold">About: </label>
             <p><%= alumni.description[0] %></p>
@@ -28,7 +28,7 @@
             <li>
                 <form action="/admin/delete-alumni" method="POST" class="m-0 p-0">
                     <input type="hidden" value="<%= alumni._id %>" name="alumniId">
-                    <button type="submit" class="px-4 py-2 border-2 border-black rounded-md text-white bg-black">Delete <i class="fa-md fa-solid fa-trash"></i></button>
+                    <button type="submit" class="px-4 py-2 rounded-md text-black bg-secondary">Delete <i class="fa-md fa-solid fa-trash"></i></button>
                 </form>
             </li>
         </ul>

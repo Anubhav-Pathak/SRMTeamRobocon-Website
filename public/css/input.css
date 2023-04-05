@@ -144,14 +144,11 @@ form input, textarea{
   background: none;
 }
 
-.swiper-sponsor, .swiper-project {
+.swiper-sponsor, .swiper-project{
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
-}
-.swiper-project{
-  height: 400px;
 }
 .swiper-sponsor{
   height: 150px;
@@ -160,6 +157,10 @@ form input, textarea{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+.swiper-project .swiper-slide {
+  width: 300px;
+  height: 300px;
 }
 
 .scroll::-webkit-scrollbar {

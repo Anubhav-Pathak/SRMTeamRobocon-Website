@@ -1,5 +1,6 @@
 import Member from "../../models/member.mjs";
 import Tasks from "../../models/tasks.mjs";
+import moment from "moment/moment.js";
 
 export const getTask = (req, res, next) => {
     Tasks.find({assignor: req.admin._id}).populate("assignee")
@@ -37,6 +38,35 @@ export const postAddTask = (req, res, next) => {
     });
     task.save()
     .then(()=>res.redirect("/admin/task"))
+    .catch(e => console.log(e));
+}
+
+export const getEditTask = (req, res, next) => {
+    const editMode = req.query.edit;
+    if(!editMode) return res.redirect('/admin/task');
+    const taskId = req.params.taskId;
+    Tasks.findById(taskId)
+    .then(task => {
+        if(!task) return res.redirect("/admin/task");
+        res.render("admin/add_tasks", {
+            docTitle: "Edit Task",
+            path: "/admin/add-task",
+            editing: editMode,
+            task: task,
+            deadline: moment(task.deadline).utc().format("YYYY-MM-DD")
+        });
+    })
+    .catch(e => console.log(e));
+}
+
+export const postEditTask = (req, res, next) => {
+    const taskId = req.body.taskId;
+    Task.findById(taskId)
+    .then(task => {
+        task.description = req.body.description;
+        task.deadline = req.body.deadline;
+        return task.save()
+    })
     .catch(e => console.log(e));
 }
 
