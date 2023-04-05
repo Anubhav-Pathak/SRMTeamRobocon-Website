@@ -606,10 +606,6 @@ video {
   margin-top: 1rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mb-20 {
   margin-bottom: 5rem;
 }
@@ -620,10 +616,6 @@ video {
 
 .mr-\[8vw\] {
   margin-right: 8vw;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
 }
 
 .block {
@@ -674,16 +666,6 @@ video {
   height: 75px;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-max {
-  height: -moz-max-content;
-  height: max-content;
-}
-
 .max-h-80 {
   max-height: 20rem;
 }
@@ -724,58 +706,8 @@ video {
   width: 24rem;
 }
 
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.w-4\/6 {
-  width: 66.666667%;
-}
-
-.w-2\/5 {
-  width: 40%;
-}
-
-.w-16 {
-  width: 4rem;
-}
-
 .w-28 {
   width: 7rem;
-}
-
-.w-36 {
-  width: 9rem;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-auto {
-  width: auto;
-}
-
-.w-5\/6 {
-  width: 83.333333%;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
-.min-w-fit {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
 }
 
 .max-w-xs {
@@ -796,22 +728,6 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
-}
-
-.max-w-prose {
-  max-width: 65ch;
-}
-
-.max-w-md {
-  max-width: 28rem;
-}
-
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
 }
 
 .-translate-y-\[100vh\] {
@@ -953,10 +869,6 @@ video {
   border-radius: 0.375rem;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .border-2 {
   border-width: 2px;
 }
@@ -998,37 +910,8 @@ video {
   background-color: rgb(0 0 0 / 0.8);
 }
 
-.bg-neutral-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-transparent {
   background-color: transparent;
-}
-
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-tertiary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(135 135 135 / var(--tw-bg-opacity));
-}
-
-.bg-quaternary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 76 170 / var(--tw-bg-opacity));
-}
-
-.bg-black\/95 {
-  background-color: rgb(0 0 0 / 0.95);
 }
 
 .bg-none {
@@ -1086,11 +969,6 @@ video {
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .py-12 {
@@ -1615,11 +1493,6 @@ form input, textarea{
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:bg-neutral-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-tertiary:hover {
