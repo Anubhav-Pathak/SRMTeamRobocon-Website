@@ -4,7 +4,7 @@ import {getTeam, getAddMember, postAddMember, getEditMember, postEditMember, pos
 import {getAlumni, getAddAlumni, postAddAlumni, postDeleteAlumni, getDetailsAlumni} from "../controllers/Admin/Alumni.mjs"
 import {getAchievements, getAddAchievements, postAddAchievement, getEditAchievement, postEditAchievement, postDeleteAchievement} from "../controllers/Admin/Achievement.mjs"
 import {getProjects, getAddProjects, postAddProject, getEditProject, postEditProject, postDeleteProject} from "../controllers/Admin/Project.mjs";
-import {getAddTask, getTask, postAddTask, postDeleteTask} from "../controllers/Admin/Task.mjs";
+import {getAddTask, getEditTask, getTask, postAddTask, postDeleteTask, postEditTask} from "../controllers/Admin/Task.mjs";
 import isAuthorized from "../middlewares/isAuthorized.mjs"
 
 const router = express.Router();
@@ -41,5 +41,8 @@ router.post("/delete-project", isAuthorized, postDeleteProject);
 router.get("/task", isAuthorized, getTask);
 router.get("/add-task", isAuthorized, getAddTask);
 router.post("/add-task", isAuthorized, postAddTask );
+router.get("/edit-task/:taskId", isAuthorized, getEditTask);
+router.post("/edit-task", isAuthorized, postEditTask);
 router.post("/delete-task", isAuthorized, postDeleteTask);
+
 export default router;

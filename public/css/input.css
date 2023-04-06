@@ -14,6 +14,25 @@
 body{
   font-family: exo;
   color: white;
+  overflow-x: hidden;
+}
+
+.link{
+  position: relative;
+  padding-bottom: 5px;
+}
+.link::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20px;
+  border-bottom: 2px solid #C20000;
+  transition: 0.5s;
+}
+.link:hover::before{
+  width: 100%;
 }
 
 ul.active{
@@ -125,14 +144,11 @@ form input, textarea{
   background: none;
 }
 
-.swiper-sponsor, .swiper-project {
+.swiper-sponsor, .swiper-project{
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
-}
-.swiper-project{
-  height: 400px;
 }
 .swiper-sponsor{
   height: 150px;
@@ -141,6 +157,10 @@ form input, textarea{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+.swiper-project .swiper-slide {
+  width: 300px;
+  height: 300px;
 }
 
 .scroll::-webkit-scrollbar {

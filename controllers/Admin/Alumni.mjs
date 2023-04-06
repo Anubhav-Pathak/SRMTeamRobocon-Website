@@ -12,6 +12,7 @@ export const getAlumni = (req, res, next) => {
         });
         res.render("admin/alumni", {
             docTitle: `Admin | Alumni`,
+            path: '/admin/alumni',
             alumnis: passouts,
         })
     })
@@ -24,6 +25,7 @@ export const getAddAlumni = (req, res, next) => {
     .then((member) => {
         return res.render("admin/add_alumni", {
             docTitle: "Add Alumni",
+            path: '/admin/add-alumni',
             member: member
         })
     })
@@ -64,6 +66,7 @@ export const getDetailsAlumni = (req, res, next) => {
     .then(alumni => {
         res.render("admin/alumni_details", {
             docTitle: `Admin | Alumni`,
+            path: '/admin/alumni-detail',
             alumni: alumni
         });
     })

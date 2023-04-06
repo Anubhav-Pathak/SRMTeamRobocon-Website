@@ -1,7 +1,7 @@
 <%- include("../includes/header.ejs") %>
-    <section class="pt-4 flex flex-wrap gap-y-2 gap-x-4 sm:justify-between items-center justify-center mb-12">
-        <h1 class="text-center text-xl">Alumnis</h1>
-        <button class="border-2 px-4 py-2 bg-slate-800 rounded-3xl"><a href="/admin/team"><i class="fa-regular fa-plus"></i>&nbsp;Add Alumni</a></button>
+    <section class="pt-4 flex gap-y-2 items-center justify-between mb-12 lg:px-[8vw]">
+        <h1 class="text-center text-xl">Alumni</h1>
+        <a class="w-12 h-12 rounded-full border-2 flex items-center justify-center" href="/admin/team"><i class="fa-2xl fa-regular fa-plus"></i></a>
     </section>
     <section class="block">
         <% if(alumnis.length > 0) { %>
@@ -17,7 +17,7 @@
                                 <li><%= alumni.memberId.email %></li>
                                 <li><%= alumni.memberId.phone %></li>
                             </ul>
-                            <a href="/admin/alumni/<%= alumni._id %>" class="self-end my-2 p-1 rounded border-black border-2">Read more...</a>
+                            <a href="/admin/alumni/<%= alumni._id %>" class="self-end my-2 p-1 rounded border-secondary border-2">Read more...</a>
                         </article>
                     <% } %>
                 </section>

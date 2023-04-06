@@ -1,14 +1,14 @@
 <%- include("../includes/header.ejs") %>
-    <section class="pt-4 flex flex-wrap gap-y-2 gap-x-4 sm:justify-between items-center justify-center mb-12">
+    <section class="pt-4 flex gap-y-2 items-center justify-between mb-12 lg:px-[8vw]">
         <h1 class="text-center text-xl">Tasks</h1>
-        <button class="border-2 px-4 py-2 bg-slate-800 rounded-3xl"><a href="/admin/add-task"><i class="fa-regular fa-plus"></i>&nbsp;Assign Task</a></button>
+        <a class="w-12 h-12 rounded-full border-2 flex items-center justify-center" href="/admin/add-task"><i class="fa-2xl fa-regular fa-plus"></i></a>
     </section>
     <section class="p-2 gap-y-4">
         <% if(tasks.length > 0) { %>
             <% for(i in tasks) { %>
-                <article class="mx-auto mb-4 max-w-xl border-2 p-4 rounded flex flex-col">
-                    <div class="grid grid-cols-[7fr_4fr_1fr]">
-                        <div class="row-start-1">
+                <article class="mx-auto mb-4 max-w-3xl border-2 p-4 rounded">
+                    <div class="grid grid-cols-[7fr_4fr_1fr] mb-4">
+                        <div>
                             <h1 class="text-xl mb-2">Task: <%= tasks[i]._id.toString().slice(-8).toUpperCase() %></h1>
                             <h2 class="font-bold">Assignee - <%= tasks[i].assignee.name %><h2>
                             <ul class="ml-4 text-sm">
@@ -26,12 +26,11 @@
                                 <button type="submit"><i class="fa-solid fa-trash"></i></button>
                             </form>
                             <a href="/admin/edit-task/<%= tasks[i]._id %>?edit=true"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <button class="block mt-12" onclick="() => showDetails(i)"><i class="fa-solid fa-caret-down"></i></button>
-                        <div>
+                        </div>
                     </div>
                     <div>
-                        <h1>Deadline</h1>
-                        <p><%= tasks[i].description %></p>
+                        <h1 class="font-bold">Description</h1>
+                        <p class="h-16 overflow-y-scroll scroll"><%= tasks[i].description %></p>
                     </div>
 
                 </article>

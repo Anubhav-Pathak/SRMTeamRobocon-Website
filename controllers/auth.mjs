@@ -3,7 +3,8 @@ import bcrypt from "bcryptjs";
 
 export const getLogin = (req, res, next) => {
     res.render("client/login", {
-        docTitle: "Robocon | Login"
+        docTitle: "Robocon | Login",
+        path: '/login'
     })
 }
 
