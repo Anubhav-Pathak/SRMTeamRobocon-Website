@@ -3,12 +3,12 @@
         <h1 class="text-4xl mb-4 text-center text-secondary font-primary">Our <span class="text-tertiary">Achievements</span></h1>
         <p class="mb-12">Our unwavering passion has paved its way to heights unfathomable for many. Pioneering every step through innovation and mere excellence</p>
     </section>
-    <section class="flex flex-wrap items-center justify-center">
+    <section class="flex flex-wrap items-center justify-center gap-8">
         <% if(achievements.length > 0) { %>
             <% for(achievement of achievements) { %>
-                <article class="p-4 bg-glass flex flex-col items-center text-secondary font-secondary">
+                <article class="sm:w-96 p-4 bg-glass flex flex-col items-center text-secondary font-secondary">
                     <img src="/images/achievements/<%= achievement.name %>.jpg" class="mb-4 w-[200px]" loading="lazy">
-                    <p><%= achievement.description %></p>
+                    <p class="h-64 scroll overflow-y-scroll"><%= achievement.description %></p>
                 </article>
             <% } %>
         <% } else { %>

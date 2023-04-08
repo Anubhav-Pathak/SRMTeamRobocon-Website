@@ -1,36 +1,26 @@
     </main>
     
-    <footer class="flex flex-wrap gap-8 items-center sm:justify-between px-4 py-12 bg-footer font-secondary">
-        <div class="text-secondary">
-            <ul class="flex gap-x-4 mb-4">
-                <li><a target="_blank" href="https://www.facebook.com/roboconindia"><i class="fa-2xl fa-brands fa-square-facebook"></i></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/srmteamrobocon/"><i class="fa-2xl fa-brands fa-square-instagram"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/company/srmteamrobocon/"><i class="fa-2xl fa-brands fa-linkedin"></i></a></li>
-                <li><a target="_blank" href="https://www.youtube.com/@srmtechrobocon426"><i class="fa-2xl fa-brands fa-youtube"></i></a></li>
+    <footer class="bg-primary px-4 py-2 relative flex items-center sm:justify-between justify-center flex-wrap gap-8">
+        <img src="/images/Footer.svg" alt="Footer" class="absolute top-0 left-0 -translate-y-1/2 w-1/2 min-w-[250px]">
+        <div>
+            <h1 class="link font-primary text-secondary text-xl mb-4">Reach Us</h1>
+            <ul class="flex gap-x-8 mb-8">
+                <li><a href=""><i class="fa-2xl fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-2xl fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-2xl fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-2xl fa-brands fa-discord"></i></a></li>
             </ul>
-            <% if(!isAuthenticated) { %>
-                <a href="/login"><button class="px-2 py-2 clip-1 bg-glass backdrop-blur-lg">Login as member</button></a>
-            <% } else { %>
-                <a href="/logout"><button class="px-2 py-2 clip-1 bg-glass backdrop-blur-lg">Logout</button></a>
-            <% } %>
+            <a href="/login"><button class="bg-secondary button-shadow rounded-full px-8 py-2 text-black cursor-pointer"><i class="fa-solid fa-user"></i>&nbsp;Login</button></a>
+
         </div>
-        <div class="flex flex-wrap-reverse justify-start gap-x-16 gap-y-4 text-secondary">
-            <ul class="text-sm">
-                <li class="text-xl mb-2">Quick Links</li>
-                <a href="\"><li>Home</li></a>
-                <a href="\#projects"><li>Projects</li></a>
-                <a href="\achievements"><li>Achievements</li></a>
-            </ul>
-            <ul class="text-sm">
-                <li class="text-xl mb-2">About Us</li>
-                <a href="\team"><li>Team</li></a>
-                <a href="\gallery"><li>Gallery</li></a>
-                <a href="\alumni"><li>Alumni</li></a>
-                <a href="\"><li>Blogs</li></a>
-            </ul>
-            <img src="images/Logo.svg">
+        <div>
+            <img src="/images/Embelem.gif" alt="SRM Team Robocon" class="md:w-48 w-24 inline">
+            <img src="/images/SRM.png" alt="SRM" class="md:w-48 w-24 inline">
         </div>
     </footer>
+    <div class="text-center bg-quaternary text-secondary py-4">
+        Created with <i class="fa-solid fa-screwdriver-wrench"></i> by members at SRMTeamRobocon
+    </div>
     
 </body>
 </html>
