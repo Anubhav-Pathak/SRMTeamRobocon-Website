@@ -53,7 +53,7 @@ export const getAboutus = (req, res, next) => {
     res.render("client/aboutus", {
         docTitle: "About Us",
         path: "/aboutus",
-    })
+    });
 }
 
 export const getAlumni = (req, res, next) => {
