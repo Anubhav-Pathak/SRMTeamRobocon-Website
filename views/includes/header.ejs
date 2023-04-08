@@ -19,7 +19,7 @@
     
     <title> <%= docTitle %> </title>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
     <div class="w-full h-screen backdrop-blur-lg fixed hidden z-10" id="overlay"></div>
 
@@ -39,6 +39,7 @@
                 <li><a href="/achievements" class="<%= path === '/achievements' ? 'link' : '' %>">Achievements</a></li>
                 <!-- <li><a href="/blogs" class="<%= path === '/blogs' ? 'link' : '' %>">Blogs</a></li> -->
                 <li><a href="/alumni" class="<%= path === '/alumni' ? 'link' : '' %>">Alumni</a></li>
+                <li><a href="/aboutus" class="<%= path === '/aboutus' ? 'link' : '' %>">About Us</a></li>
             <% } else { %>
                 <li><a href="/admin/">Panel</a></li>
                 <li><a href="/admin/task">Tasks</a></li>
