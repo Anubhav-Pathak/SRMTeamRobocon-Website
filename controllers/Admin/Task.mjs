@@ -61,7 +61,7 @@ export const getEditTask = (req, res, next) => {
 
 export const postEditTask = (req, res, next) => {
     const taskId = req.body.taskId;
-    Task.findById(taskId)
+    Tasks.findById(taskId)
     .then(task => {
         task.description = req.body.description;
         task.deadline = req.body.deadline;
