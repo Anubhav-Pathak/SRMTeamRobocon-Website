@@ -1,6 +1,6 @@
 <%- include("../includes/header.ejs") %>   
 
-    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-75px)] max-w-7xl grid sm:grid-cols-[1.5fr_1fr] place-items-center gap-8" id="home">
+    <section class="mx-auto px-4 py-12 min-h-[calc(100vh-75px)] max-w-7xl flex items-center justify-center md:justify-between gap-4 md:flex-nowrap flex-wrap " id="home">
         <article class="four animate">
             <h1 class="text-4xl font-primary text-secondary">Robotics.<span class="text-quaternary"> Reimagined</span></h1>
             <p class="mt-4 text-lg text-secondary font-secondary">We transition ideas into reality, building ingenious technology in the form of Robotic systems. We are the official team of SRMIST participating in the international competition ABU Robocon since the year 2011.<br>But we're so much more than that.</p>
@@ -11,7 +11,7 @@
     </section>
 
     <section class="py-36">
-        <h1 class="text-center text-4xl text-secondary font-primary mb-16 three animate" id="projects">Projects <span class="text-tertiary">Done</span></h1>
+        <h1 class="text-center text-4xl text-secondary font-primary mb-16 three animate" id="projects">Projects</h1>
         <div class="swiper-project">
             <div class="swiper-wrapper">
                 <% for(project of projects) { %>

@@ -738,6 +738,10 @@ video {
   width: 50%;
 }
 
+.min-w-\[250px\] {
+  min-width: 250px;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
@@ -1593,6 +1597,10 @@ form input, textarea{
     grid-template-columns: 1.5fr 1fr;
   }
 
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
   .sm\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -1632,6 +1640,18 @@ form input, textarea{
 
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:px-8 {
