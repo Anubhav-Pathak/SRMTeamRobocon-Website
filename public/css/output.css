@@ -686,6 +686,14 @@ video {
   height: 75px;
 }
 
+.h-\[80\] {
+  height: 80;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
 .max-h-\[550px\] {
   max-height: 550px;
 }
@@ -740,6 +748,10 @@ video {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-64 {
+  width: 16rem;
 }
 
 .min-w-\[300px\] {
@@ -1625,6 +1637,10 @@ form input, textarea{
 }
 
 @media (min-width: 640px) {
+  .sm\:w-96 {
+    width: 24rem;
+  }
+
   .sm\:justify-between {
     justify-content: space-between;
   }
