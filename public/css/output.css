@@ -662,6 +662,10 @@ video {
   height: 4rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-96 {
   height: 24rem;
 }
@@ -684,14 +688,6 @@ video {
 
 .h-\[75px\] {
   height: 75px;
-}
-
-.h-\[80\] {
-  height: 80;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .max-h-\[550px\] {
@@ -748,10 +744,6 @@ video {
 
 .w-24 {
   width: 6rem;
-}
-
-.w-64 {
-  width: 16rem;
 }
 
 .min-w-\[300px\] {
