@@ -10,7 +10,7 @@
                 <li><a href=""><i class="fa-2xl fa-brands fa-twitter"></i></a></li>
                 <li><a href=""><i class="fa-2xl fa-brands fa-discord"></i></a></li>
             </ul>
-            <a href="/login"><button class="bg-secondary button-shadow rounded-full px-8 py-2 text-black cursor-pointer"><i class="fa-solid fa-user"></i>&nbsp;Login</button></a>
+            <a href="<% if(isAuthenticated) {%>/logout<% } else { %>/login<% } %>"><button class="bg-secondary button-shadow rounded-full px-8 py-2 text-black cursor-pointer"><i class="fa-solid fa-user"></i>&nbsp;<%= isAuthenticated ? "Logout" : "Login" %></button></a>
 
         </div>
         <div>

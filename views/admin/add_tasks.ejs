@@ -5,7 +5,7 @@
     <form action="/admin/<% if(editing) { %>edit-task?edit=true<% } else { %>add-task<% } %>" method="POST" class="flex flex-col gap-6 p-4 border-2 rounded-lg shadow-md">
         <div class="form-control">
             <label for="description" class="block"> Description: </label>
-            <textarea type="text" id="description" name="description" class="outline-none w-full resize-none border-2 rounded-sm" rows="5" cols="50"><% if(editing) { %><%=task.description%><% } else { %><% } %></textarea>
+            <textarea type="text" id="description" name="description" class="p-2 outline-none w-full resize-none border-2 rounded-sm" rows="5" cols="50"><% if(editing) { %><%=task.description%><% } else { %><% } %></textarea>
         </div>
         <div class="form-control">
             <label for="assignee" class="block"> Assignee: </label>
@@ -17,8 +17,11 @@
         </div>
         <div class="border-b-2">
             <label for="deadline" class="block"> Deadline: </label>
-            <input type="date" id="deadline" name="deadline" class="outline-none w-full" required>
+            <input type="date" id="deadline" name="deadline" class="outline-none w-full" value="<% if(editing) { %><%=deadline%><% } else { %><% } %>" required>
         </div>
+        <% if (editing) { %>
+            <input type="hidden" name="taskId" value="<%= task.id %>">
+        <% } %>
         <input type="submit" value="<% if(editing) { %>Update Task<% } else { %>Add Task<% } %>" class="bg-black text-white rounded-sm p-2 cursor-pointer">
     </form>
 
