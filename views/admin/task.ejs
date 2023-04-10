@@ -9,14 +9,14 @@
                 <article class="mx-auto mb-4 max-w-3xl border-2 p-4 rounded">
                     <div class="grid grid-cols-[7fr_4fr_1fr] mb-4">
                         <div>
-                            <h1 class="text-xl mb-2">Task: <%= tasks[i]._id.toString().slice(-8).toUpperCase() %></h1>
+                            <h1 class="text-xl mb-2">Task: <%= tasks[i]._id.toString().slice(-8).toUpperCase() %> (<%= tasks[i].status %>)</h1>
                             <h2 class="font-bold">Assignee - <%= tasks[i].assignee.name %><h2>
                             <ul class="ml-4 text-sm">
                                 <li><i class="fa-xs fa-solid fa-phone mr-2"></i><%= tasks[i].assignee.phone %></li>
                                 <li><i class="fa-xs fa-solid fa-envelope mr-2"></i><%= tasks[i].assignee.email %></li>
                             </ul>
                         </div>
-                        <div class="flex flex-col gap-2 items-center justify-center text-xs">
+                        <div class="flex flex-col gap-2 justify-center text-xs">
                             <p class="deadline">Assigned On:<br> <%= tasks[i].assignedOn.toDateString() %></p>
                             <p class="deadline">Deadline:<br> <%= tasks[i].deadline.toDateString() %></p>
                         </div>
