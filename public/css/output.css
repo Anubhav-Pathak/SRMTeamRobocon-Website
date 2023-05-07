@@ -544,6 +544,10 @@ video {
   right: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -556,14 +560,18 @@ video {
   margin: 0px;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.m-10 {
+  margin: 2.5rem;
 }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-12 {
@@ -594,6 +602,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .-mt-20 {
   margin-top: -5rem;
 }
@@ -608,10 +620,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
 }
 
 .mb-16 {
@@ -658,6 +666,10 @@ video {
   display: block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -682,8 +694,15 @@ video {
   height: 200px;
 }
 
+.h-8 {
+  height: 2rem;
+}
 .h-16 {
   height: 4rem;
+}
+
+.h-64 {
+  height: 16rem;
 }
 
 .h-96 {
@@ -712,6 +731,9 @@ video {
 
 .h-\[28rem\] {
   height: 28rem;
+
+.max-h-\[550px\] {
+  max-height: 550px;
 }
 
 .min-h-\[calc\(100vh-75px\)\] {
@@ -746,6 +768,10 @@ video {
   width: 100%;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .w-80 {
   width: 20rem;
 }
@@ -760,6 +786,20 @@ video {
 
 .w-\[22rem\] {
   width: 22rem;
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.min-w-\[300px\] {
+  min-width: 300px;
+}
+
+.min-w-\[250px\] {
+  min-width: 250px;
 }
 
 .max-w-xs {
@@ -819,10 +859,6 @@ video {
   flex-wrap: wrap-reverse;
 }
 
-.place-items-center {
-  place-items: center;
-}
-
 .items-end {
   align-items: flex-end;
 }
@@ -831,8 +867,8 @@ video {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -875,16 +911,6 @@ video {
   row-gap: 1rem;
 }
 
-.gap-x-4 {
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-}
-
-.gap-x-16 {
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-}
-
 .gap-x-12 {
   -moz-column-gap: 3rem;
        column-gap: 3rem;
@@ -892,6 +918,10 @@ video {
 
 .self-end {
   align-self: flex-end;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .overflow-y-scroll {
@@ -979,10 +1009,6 @@ video {
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.01) 100%);
 }
 
-.bg-footer {
-  background-image: linear-gradient(180deg, #171924 15.1%, rgba(135, 135, 135, 1) 100%);
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1048,6 +1074,10 @@ video {
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pb-36 {
@@ -1302,6 +1332,14 @@ body{
 
 .link:hover::before{
   width: 100%;
+}
+
+.button-shadow{
+  box-shadow: 0px 0px 10px 1px rgba(194,0,0,1);
+}
+
+.button-shadow:hover{
+  box-shadow: 0 0 10px 1px #004caa;
 }
 
 ul.active{
@@ -1602,8 +1640,8 @@ form input, textarea{
 }
 
 @media (min-width: 640px) {
-  .sm\:grid-cols-\[1\.5fr_1fr\] {
-    grid-template-columns: 1.5fr 1fr;
+  .sm\:w-96 {
+    width: 24rem;
   }
 
   .sm\:justify-between {
@@ -1622,6 +1660,14 @@ form input, textarea{
 }
 
 @media (min-width: 768px) {
+  .md\:m-24 {
+    margin: 6rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1634,8 +1680,16 @@ form input, textarea{
     display: none;
   }
 
+  .md\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .md\:w-3\/4 {
     width: 75%;
+  }
+
+  .md\:w-48 {
+    width: 12rem;
   }
 
   .md\:-translate-y-0 {
@@ -1647,6 +1701,14 @@ form input, textarea{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1655,6 +1717,27 @@ form input, textarea{
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+.md\:pl-24 {
+    padding-left: 6rem;
+  }
+
+  .md\:pr-24 {
+    padding-right: 6rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-right {
+    text-align: right;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

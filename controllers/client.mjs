@@ -49,6 +49,13 @@ export const getGallery = (req, res, next) => {
     })
 }
 
+export const getAboutus = (req, res, next) => {
+    res.render("client/aboutus", {
+        docTitle: "About Us",
+        path: "/aboutus",
+    });
+}
+
 export const getAlumni = (req, res, next) => {
     Alumni.find()
     .then(alumnis => {

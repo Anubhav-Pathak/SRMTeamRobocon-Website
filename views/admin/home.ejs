@@ -1,11 +1,51 @@
 <%- include("../includes/header.ejs") %>
 
-    <section class="min-h-[calc(100vh-150px)] flex flex-col justify-center text-center p-2">
+    <section class="min-h-[calc(100vh-75px)] flex flex-col justify-center text-center p-2">
         <h3 class="text-2xl">Welcome</h3>
         <h1 class="text-4xl mb-4"><%= admin.name %></h1>
         <p><%= admin.position %></p>
         <% if(admin.position !== "Team lead") { %>
             <p><%= admin.domain.toUpperCase() %></p>
+        <% } %>
+    </section>
+    <section class="p-2">
+        <h1 class="text-2xl mb-12">Tasks</h1>
+        <% if(tasks.length > 0) { %>
+            <% for(task of tasks) { %>
+                <article class="mx-auto mb-4 max-w-3xl border-2 p-4 rounded">
+                    <div class="grid grid-cols-[7fr_4fr_1fr] mb-4">
+                        <div>
+                            <h1 class="text-xl mb-2">Task: <%= task._id.toString().slice(-8).toUpperCase() %> (<%= task.status %>)</h1>
+                            <h2 class="font-bold">Assignor - <%= task.assignor.name %><h2>
+                            <ul class="ml-4 text-sm">
+                                <li><i class="fa-xs fa-solid fa-phone mr-2"></i><%= task.assignor.phone %></li>
+                                <li><i class="fa-xs fa-solid fa-envelope mr-2"></i><%= task.assignor.email %></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-2 justify-center text-xs">
+                            <p class="deadline">Assigned On:<br> <%= task.assignedOn.toDateString() %></p>
+                            <p class="deadline">Deadline:<br> <%= task.deadline.toDateString() %></p>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <form action="/admin/complete-task" method="POST" class="m-0 p-0">
+                                <input type="hidden" value="<%= task._id %>" name="taskId">
+                                <button type="submit" class="text-green-500"><i class="w-8 h-8 fa-solid fa-check"></i></button>
+                            </form>
+                            <form action="/admin/cancel-task" method="POST" class="m-0 p-0">
+                                <input type="hidden" value="<%= task._id %>" name="taskId">
+                                <button type="submit" class="text-red-500"><i class="w-8 h-8 fa-solid fa-x"></i></button>
+                            </form>  
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="font-bold">Description</h1>
+                        <p class="h-16 overflow-y-scroll scroll"><%= task.description %></p>
+                    </div>
+
+                </article>
+            <% } %>
+        <% } else { %>
+            <h1 class="text-xl text-center">No Tasks :)</h1>
         <% } %>
     </section>
 

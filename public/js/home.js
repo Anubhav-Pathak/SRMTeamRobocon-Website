@@ -129,7 +129,7 @@ window.addEventListener('load', function () {
 
   count_intersection_animation(members_count, 65, 1000 / 65)
   count_intersection_animation(participations_count, 6, 1000 / 6)
-  count_intersection_animation(robots_count, 11, 1000 / 11)
+  count_intersection_animation(robots_count, 20, 1000 / 20)
   count_intersection_animation(alumini_count, 100, 1000 / 100)
 
 })
