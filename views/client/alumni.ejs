@@ -13,7 +13,7 @@
               <section class="mb-8 flex flex-wrap gap-8 items-center justify-evenly">
                   <% for(alumni of passout[Object.keys(passout)]) {%>
                       <article class="">
-                        <div class="group h-96 w-80 [perspective:1000px]">
+                        <div class="group h-[28rem] w-[22rem] [perspective:1000px]">
                             <div class="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-focus:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
                               <div class="absolute inset-0 bg-slate-100">
                                 <img class="h-full w-full object-cover shadow-xl shadow-black/40" src="/images/people/<%= alumni.memberId.name %>.jpg" alt="" />
@@ -26,9 +26,10 @@
                                   <p class="text-lg"><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></p>
                                   <!-- <p class="text-base"><%= alumni.quote %></p> -->
                                   <br>
-                                  <i class="fa-solid fa-quote-left mr-48"></i>
-                                  <p class="text-base"><%= alumni.description[1] %></p>
-                                  <i class="fa-solid fa-quote-right ml-48"></i>
+                                  <i class="fa-solid fa-quote-left mr-60"></i>
+                                  <p class="text-base"><%= alumni.quote %></p>
+                                  <!-- <p class="text-base"><%= alumni.description[1] %></p> -->
+                                  <i class="fa-solid fa-quote-right ml-60"></i>
                                   <br>
                                   <p class="text-base"><%= alumni.description[0] %></p>
                                   <ul class="flex gap-4 mt-4">
