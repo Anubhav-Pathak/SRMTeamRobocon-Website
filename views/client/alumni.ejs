@@ -3,7 +3,6 @@
     <section class="pt-12 text-secondary font-secondary text-center">
       <h1 class="text-4xl mb-4 text-center text-secondary font-primary">Meet Our <span class="text-tertiary">Alumnis</span></h1>
       <p class="mb-12">Our mentors, who have passed down all the resources needed to reach new heights, through the foundation they built based on innovation and commendable work ethic.</p>
-      <!-- <p class="mb-12">Our alumni present us with a unique opportunity to build a foundation of support to be a strong team.</p> -->
     </section>
 
     <section class="mb-12 gap-8 items-center justify-evenly">
@@ -20,14 +19,13 @@
                                 <h1 class="text-3xl font-bold absolute -mt-20 z-10 w-full bg-white/50 text-gray-900 group-hover:hidden text-center"><%= alumni.memberId.name %> <br> <p class="text-lg"><%= alumni.memberId.position %>- <%= alumni.memberId.domain.toUpperCase() %></p> </h1>
                                 <!-- <h1 class="text-xl font-bold absolute -mt-20 z-10 w-full bg-white/50 text-gray-900 group-hover:hidden"><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></h1> -->
                               </div>
-                              <div class="absolute inset-0 h-full w-full bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                              <div class="scroll overflow-y-scroll absolute inset-0 h-full w-full bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                                 <div class="flex min-h-full flex-col items-center justify-center">
                                   <h1 class="text-3xl font-bold"><%= alumni.memberId.name %></h1>
                                   <p class="text-lg"><%= alumni.memberId.domain.toUpperCase() %> <%= alumni.memberId.position %></p>
-                                  <!-- <p class="text-base"><%= alumni.quote %></p> -->
                                   <br>
                                   <i class="fa-solid fa-quote-left mr-48"></i>
-                                  <p class="text-base"><%= alumni.description[1] %></p>
+                                  <p class="text-base"><%= alumni.quote%></p>
                                   <i class="fa-solid fa-quote-right ml-48"></i>
                                   <br>
                                   <p class="text-base"><%= alumni.description[0] %></p>
