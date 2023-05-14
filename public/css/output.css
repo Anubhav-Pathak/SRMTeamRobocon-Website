@@ -670,8 +670,8 @@ video {
   height: 16rem;
 }
 
-.h-96 {
-  height: 24rem;
+.h-\[28rem\] {
+  height: 28rem;
 }
 
 .h-full {
@@ -734,8 +734,8 @@ video {
   width: 2rem;
 }
 
-.w-80 {
-  width: 20rem;
+.w-\[22rem\] {
+  width: 22rem;
 }
 
 .w-4\/5 {
